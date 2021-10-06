@@ -1,11 +1,11 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, View, Alert} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import {
-  MessengerButton,
   MessengerImage,
   MessengerStatusBar,
   MessengerText,
 } from './components/ui-kit';
+import {ProfileInfo} from './components/ProfileInfo';
 
 const App = () => {
   return (
@@ -15,26 +15,18 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={styles.defaultStyle}>
         <View style={styles.container}>
-          <MessengerImage style={styles.profilePhoto} />
-          <MessengerText text="Kat Williams" />
-          <MessengerText text="@Williams" />
-          <MessengerText text="Россия, Санкт-Петербург" />
-          <MessengerText text="Место работы: Artist by Passion!" />
-          <View style={styles.containerSubscribers}>
-            <MessengerText text="2,467 " />
-            <MessengerText text="1,589" />
-            <MessengerButton
-              text="Edit Profile"
-              onPress={() => Alert.alert('Button pressed')}
-            />
-          </View>
+          <ProfileInfo />
         </View>
         <View>
           <MessengerText text="Фотографии" />
           <View>
-            <MessengerImage />
-            <MessengerImage />
-            <MessengerImage />
+            <MessengerImage
+              path={require('./assets/images/photo1.jpg')}
+            />
+            <MessengerImage
+              path={require('./assets/images/photo1.jpg')} />
+            <MessengerImage
+              path={require('./assets/images/photo1.jpg')} />
           </View>
         </View>
       </ScrollView>

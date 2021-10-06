@@ -3,8 +3,8 @@ import {Image, StyleSheet} from 'react-native';
 
 export const MessengerImage = props => (
   <Image
-    style={styles.defaultImage}
-    source={require('../../../assets/images/photo1.jpg')}
+    style={{...styles.defaultImage, ...props.style}}
+    source={props.path}
   />
 );
 
