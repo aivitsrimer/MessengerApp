@@ -11,10 +11,12 @@ export const MessengerText = props => (
 
 const styles = StyleSheet.create({
   defaultText: {
+    fontFamily: 'HKGrotesk-Regular',
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: 14,
     lineHeight: 20,
+    textAlign: 'center',
     color: '#FFFFFF',
   },
 });

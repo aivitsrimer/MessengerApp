@@ -10,7 +10,7 @@ import {
 const App = () => {
   return (
     <SafeAreaView style={styles.defaultStyle}>
-      <MessengerStatusBar barStyle={styles.barStyle} />
+      <MessengerStatusBar />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.defaultStyle}>
@@ -43,9 +43,6 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  barStyle: {
-    backgroundColor: '#2B2146',
-  },
   defaultStyle: {
     backgroundColor: '#2B2146',
   },
