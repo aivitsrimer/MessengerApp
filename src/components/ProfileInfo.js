@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert, StyleSheet, View, Text} from 'react-native';
+import {Alert, StyleSheet, View} from 'react-native';
 import {MessengerButton, MessengerImage, MessengerText} from './ui-kit';
 import {FollowingInfo} from './FollowingInfo';
 import typo from './ui-kit/text/typo';
@@ -13,27 +13,15 @@ export const ProfileInfo = () => {
           <Icon name="arrow-left" color="#FFFFFF" size={24} style={styles.iconArrow} />
           <Icon name="dots-vertical" color="#FFFFFF" size={24} style={styles.iconMenu} />
         </View>
-        <MessengerImage
-          style={styles.profilePhoto}
-          path={require('./../assets/images/profilePhoto.jpg')}
-        />
+        <MessengerImage style={styles.profilePhoto} path={require('./../assets/images/profilePhoto.jpg')} />
         <MessengerText text="Kat Williams" style={styles.textName} />
         <MessengerText text="@Williams" style={styles.textAccount} />
-        <MessengerText
-          text="Россия, Санкт-Петербург"
-          style={styles.textLocation}
-        />
-        <MessengerText
-          text="Место работы: Artist by Passion!"
-          style={styles.textWork}
-        />
+        <MessengerText text="Россия, Санкт-Петербург" style={styles.textLocation} />
+        <MessengerText text="Место работы: Artist by Passion!" style={styles.textWork} />
       </View>
       <View style={styles.containerInfo}>
         <FollowingInfo />
-        <MessengerButton
-          text="Edit Profile"
-          onPress={() => Alert.alert('Button pressed')}
-        />
+        <MessengerButton text="Подробнее" onPress={() => Alert.alert('Button pressed')} />
       </View>
     </>
   );
@@ -59,7 +47,7 @@ const styles = StyleSheet.create({
   containerInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 24,
+    paddingHorizontal: 7,
     marginBottom: 24,
   },
   profilePhoto: {
@@ -79,7 +67,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 0,
-    transform: [{ rotate: '90deg'}],
+    transform: [{rotate: '90deg'}],
   },
   textName: {
     ...typo.GroteskBold16,

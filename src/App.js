@@ -4,17 +4,17 @@ import {MessengerStatusBar} from './components/ui-kit';
 import {ProfileInfo} from './components/ProfileInfo';
 import {PhotosGrid} from './components/PhotosGrid';
 import {Divider} from './components/Divider';
+import {MoreDetails} from './components/MoreDetails';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.defaultStyle}>
+    <SafeAreaView style={styles.defaultBackground}>
       <MessengerStatusBar />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={styles.defaultStyle}>
+      <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
           <ProfileInfo />
           <Divider />
+          <MoreDetails />
           <PhotosGrid />
         </View>
       </ScrollView>
@@ -23,14 +23,16 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  defaultStyle: {
+  defaultBackground: {
     backgroundColor: '#2B2146',
+  },
+  defaultStyle: {
+    paddingHorizontal: 16,
   },
   container: {
     flex: 1,
     alignItems: 'center',
     color: '#FFFFFF',
-    paddingHorizontal: 16,
   },
   profilePhoto: {
     borderRadius: 50,
@@ -52,7 +54,6 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     justifyContent: 'center',
-    marginHorizontal: 16,
     borderBottomWidth: 1,
     borderColor: '#3B2D5F',
   },
