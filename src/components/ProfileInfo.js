@@ -1,13 +1,18 @@
 import React from 'react';
-import {Alert, StyleSheet, View} from 'react-native';
+import {Alert, StyleSheet, View, Text} from 'react-native';
 import {MessengerButton, MessengerImage, MessengerText} from './ui-kit';
 import {FollowingInfo} from './FollowingInfo';
 import typo from './ui-kit/text/typo';
+import {Icon} from '../assets/icons';
 
 export const ProfileInfo = () => {
   return (
     <>
       <View style={styles.container}>
+        <View style={styles.iconsContainer}>
+          <Icon name="arrow-left" color="#FFFFFF" size={24} style={styles.iconArrow} />
+          <Icon name="dots-vertical" color="#FFFFFF" size={24} style={styles.iconMenu} />
+        </View>
         <MessengerImage
           style={styles.profilePhoto}
           path={require('./../assets/images/profilePhoto.jpg')}
@@ -44,6 +49,13 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: 24,
   },
+  iconsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    width: '100%',
+  },
   containerInfo: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -57,6 +69,17 @@ const styles = StyleSheet.create({
     marginBottom: 17,
     width: 95,
     height: 95,
+  },
+  iconArrow: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+  },
+  iconMenu: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    transform: [{ rotate: '90deg'}],
   },
   textName: {
     ...typo.GroteskBold16,
