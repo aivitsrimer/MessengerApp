@@ -1,11 +1,9 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
-import {
-  MessengerImage,
-  MessengerStatusBar,
-  MessengerText,
-} from './components/ui-kit';
+import {MessengerStatusBar} from './components/ui-kit';
 import {ProfileInfo} from './components/ProfileInfo';
+import {PhotosGrid} from './components/PhotosGrid';
+import {Divider} from './components/Divider';
 
 const App = () => {
   return (
@@ -16,18 +14,8 @@ const App = () => {
         style={styles.defaultStyle}>
         <View style={styles.container}>
           <ProfileInfo />
-        </View>
-        <View>
-          <MessengerText text="Фотографии" />
-          <View>
-            <MessengerImage
-              path={require('./assets/images/photo1.jpg')}
-            />
-            <MessengerImage
-              path={require('./assets/images/photo1.jpg')} />
-            <MessengerImage
-              path={require('./assets/images/photo1.jpg')} />
-          </View>
+          <Divider />
+          <PhotosGrid />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -42,6 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     color: '#FFFFFF',
+    paddingHorizontal: 16,
   },
   profilePhoto: {
     borderRadius: 50,
@@ -59,6 +48,13 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  divider: {
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 16,
+    borderBottomWidth: 1,
+    borderColor: '#3B2D5F',
   },
 });
 

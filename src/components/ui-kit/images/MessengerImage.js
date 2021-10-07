@@ -10,7 +10,7 @@ export const MessengerImage = props => (
 
 const styles = StyleSheet.create({
   defaultImage: {
-    width: 112,
+    width: 113,
     height: 113,
   },
 });
