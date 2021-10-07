@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import {MessengerText} from './ui-kit';
 import {Icon} from '../assets/icons';
 import typo from './ui-kit/text/typo';
@@ -67,19 +67,19 @@ const linkElements = links.map(item => (
   <LinkElement icon={item.icon} text={item.text} link={item.link} key={item.id} />
 ));
 
-export const MoreDetails = () => {
+export const MoreDetails = props => {
   return (
     <View style={styles.container}>
       <View style={styles.containerTitle}>
-        <MessengerText style={styles.textTitle}>Подробнее</MessengerText>
-        <TouchableOpacity onPress={() => Alert.alert('backspace pressed')}>
-          <Icon name="backspace" color="#8672BB" size={24} style={styles.iconExit} />
+        <MessengerText text="Подробнее" style={styles.textTitle} />
+        <TouchableOpacity onPress={() => props.setModalVisible(false)}>
+          <Icon name="backspace" color="#8672BB" size={24} />
         </TouchableOpacity>
       </View>
       {detailsElements}
       <Divider />
       <View style={styles.containerTitle}>
-        <MessengerText style={styles.textTitle}>Контакты</MessengerText>
+        <MessengerText text="Контакты" style={styles.textTitle} />
       </View>
       {linkElements}
     </View>
@@ -87,28 +87,22 @@ export const MoreDetails = () => {
 };
 
 const styles = StyleSheet.create({
-  defaultStyle: {
-    backgroundColor: '#2B2146',
-  },
   container: {
     flex: 1,
     marginHorizontal: 16,
     paddingTop: 13,
     paddingBottom: 49,
-    width: '100%',
   },
   containerTitle: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '100%',
+    paddingTop: 20,
+    paddingBottom: 30,
   },
-  iconExit: {},
   textTitle: {
     ...typo.GroteskBold16,
     color: '#ECEBED',
-    marginTop: 20,
-    marginBottom: 30,
   },
 });

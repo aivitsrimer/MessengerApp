@@ -1,11 +1,11 @@
 import React from 'react';
-import {Alert, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {MessengerButton, MessengerImage, MessengerText} from './ui-kit';
 import {FollowingInfo} from './FollowingInfo';
 import typo from './ui-kit/text/typo';
 import {Icon} from '../assets/icons';
 
-export const ProfileInfo = () => {
+export const ProfileInfo = props => {
   return (
     <>
       <View style={styles.container}>
@@ -21,7 +21,7 @@ export const ProfileInfo = () => {
       </View>
       <View style={styles.containerInfo}>
         <FollowingInfo />
-        <MessengerButton text="Подробнее" onPress={() => Alert.alert('Button pressed')} />
+        <MessengerButton text="Подробнее" onPress={() => props.setModalVisible(true)} />
       </View>
     </>
   );

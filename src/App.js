@@ -1,22 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import {MessengerStatusBar} from './components/ui-kit';
 import {ProfileInfo} from './components/ProfileInfo';
 import {PhotosGrid} from './components/PhotosGrid';
 import {Divider} from './components/Divider';
-import {MoreDetails} from './components/MoreDetails';
+import {MoreDetailsModal} from './components/MoreDetailsModal';
 
 const App = () => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <SafeAreaView style={styles.defaultBackground}>
       <MessengerStatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
-          <ProfileInfo />
-          <Divider />
-          <MoreDetails />
+          <ProfileInfo setModalVisible={setModalVisible} />
+          <Divider style={styles.divider} />
           <PhotosGrid />
         </View>
+        <MoreDetailsModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -53,9 +54,8 @@ const styles = StyleSheet.create({
   },
   divider: {
     flex: 1,
-    justifyContent: 'center',
-    borderBottomWidth: 1,
-    borderColor: '#3B2D5F',
+    width: '100%',
+    marginHorizontal: 16,
   },
 });
 

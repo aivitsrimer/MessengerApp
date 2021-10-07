@@ -19,10 +19,8 @@ export const LinkElement = props => {
 
 const styles = StyleSheet.create({
   containerItem: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    width: '100%',
     marginBottom: 15,
   },
   icon: {
