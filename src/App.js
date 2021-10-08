@@ -5,19 +5,25 @@ import {ProfileInfo} from './components/ProfileInfo';
 import {PhotosGrid} from './components/PhotosGrid';
 import {Divider} from './components/Divider';
 import {MoreDetailsModal} from './components/MoreDetailsModal';
+import {MenuModal} from './components/MenuModal';
+import {NavIcons} from './components/NavIcons';
 
 const App = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalDetailsVisible, setModalDetailsVisible] = useState(false);
+  const [modalMenuVisible, setModalMenuVisible] = useState(false);
+
   return (
     <SafeAreaView style={styles.defaultBackground}>
       <MessengerStatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
-          <ProfileInfo setModalVisible={setModalVisible} />
+          <NavIcons setModalVisible={setModalMenuVisible} />
+          <ProfileInfo setModalVisible={setModalDetailsVisible} />
           <Divider style={styles.divider} />
           <PhotosGrid />
         </View>
-        <MoreDetailsModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
+        <MoreDetailsModal modalVisible={modalDetailsVisible} setModalVisible={setModalDetailsVisible} />
+        <MenuModal modalVisible={modalMenuVisible} setModalVisible={setModalMenuVisible} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -34,23 +40,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     color: '#FFFFFF',
-  },
-  profilePhoto: {
-    borderRadius: 50,
-    marginTop: 20,
-  },
-  containerSubscribers: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
   divider: {
     flex: 1,
