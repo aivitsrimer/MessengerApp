@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity} from 'react-native';
-import {MessengerText} from './ui-kit';
-import {Icon} from '../assets/icons';
-import typo from './ui-kit/text/typo';
-import {DetailsElement} from './DetailsElement';
-import {Divider} from './Divider';
-import {LinkElement} from './LinkElement';
+import {View, TouchableOpacity} from 'react-native';
+import {MessengerText} from '../ui-kit';
+import {Icon} from '../../../assets/icons';
+import {DetailsElement} from '../DetailsElement';
+import {Divider} from '../Divider';
+import {LinkElement} from '../LinkElement';
+import styles from './MoreDetailsStyles';
 
 const details = [
   {
@@ -29,6 +29,7 @@ const details = [
     text: 'ВГУЮ в г. Санкт-Петербург',
   },
 ];
+
 const detailsElements = details.map(item => <DetailsElement icon={item.icon} text={item.text} key={item.id} />);
 
 const links = [
@@ -63,6 +64,7 @@ const links = [
     link: 'https://telegram.com',
   },
 ];
+
 const linkElements = links.map(item => (
   <LinkElement icon={item.icon} text={item.text} link={item.link} key={item.id} />
 ));
@@ -85,24 +87,3 @@ export const MoreDetails = props => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 16,
-    paddingTop: 13,
-    paddingBottom: 49,
-  },
-  containerTitle: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 20,
-    paddingBottom: 30,
-  },
-  textTitle: {
-    ...typo.GroteskBold16,
-    color: '#ECEBED',
-  },
-});

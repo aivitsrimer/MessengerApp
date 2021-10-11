@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, Modal, StyleSheet} from 'react-native';
-import {MoreDetails} from './MoreDetails';
+import {View, Modal} from 'react-native';
+import {MoreDetails} from '../MoreDetails';
+import styles from './MoreDetailsModalStyles';
 
 export const MoreDetailsModal = props => {
   const [backgroundAlpha, setBackgroundAlpha] = useState('none');
@@ -27,19 +28,3 @@ export const MoreDetailsModal = props => {
     </Modal>
   );
 };
-
-const styles = StyleSheet.create({
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    marginTop: 15,
-  },
-  modal: {
-    flex: 0.75,
-    elevation: 20,
-    backgroundColor: '#2B2146',
-    overflow: 'hidden',
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  },
-});

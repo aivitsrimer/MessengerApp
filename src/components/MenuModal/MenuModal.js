@@ -1,8 +1,8 @@
 import React from 'react';
-import {Modal, StyleSheet, View} from 'react-native';
-import {MenuElement} from './MenuElement';
-import {Divider} from './Divider';
-import typo from './ui-kit/text/typo';
+import {Modal, View} from 'react-native';
+import {MenuElement} from '../MenuElement';
+import {Divider} from '../Divider';
+import styles from './MenuModalStyles';
 
 export const MenuModal = props => {
   const shareButtonHandler = () => {
@@ -42,28 +42,3 @@ export const MenuModal = props => {
     </Modal>
   );
 };
-
-const styles = StyleSheet.create({
-  containerBackground: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.6)',
-  },
-  container: {
-    height: 161,
-  },
-  containerButtons: {
-    backgroundColor: '#2B2146',
-  },
-  backButton: {
-    container: {
-      marginTop: 10,
-      borderRadius: 15,
-      paddingVertical: 17,
-      justifyContent: 'center',
-    },
-    text: {
-      ...typo.GroteskBold16,
-    },
-  },
-});
