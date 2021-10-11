@@ -1,22 +1,15 @@
 import React from 'react';
-import {TouchableOpacity, StyleSheet, View} from 'react-native';
+import {TouchableOpacity, StyleSheet} from 'react-native';
 import {MessengerText} from '../text/MessengerText';
 import fonts from '../text/fonts';
 
 export const MessengerButton = props => (
-  <View style={styles.screen}>
-    <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
-      <MessengerText text={props.text} style={styles.buttonText} />
-    </TouchableOpacity>
-  </View>
+  <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
+    <MessengerText text={props.text} style={styles.buttonText} />
+  </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   buttonStyle: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -29,6 +22,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     ...fonts.GroteskBold14,
-    lineHeight: 24,
+    paddingBottom: 2,
   },
 });

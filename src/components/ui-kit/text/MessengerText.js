@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
+import fonts from './fonts';
 
 export const MessengerText = props => (
   <Text style={{...styles.defaultText, ...props.style}}>
@@ -10,9 +11,8 @@ export const MessengerText = props => (
 
 const styles = StyleSheet.create({
   defaultText: {
-    fontFamily: 'HKGrotesk-Regular',
+    ...fonts.GroteskRegular16,
     fontStyle: 'normal',
-    fontSize: 14,
     textAlign: 'center',
     color: '#FFFFFF',
   },
