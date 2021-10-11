@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 12,
+    paddingTop: 13,
+    paddingBottom: 11,
     paddingHorizontal: 16,
     backgroundColor: colors.ULTRAMARINE_BLUE,
   },
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
     ...fonts.GroteskSemibold16,
     color: '#FFFFFF',
     textAlign: 'auto',
+    paddingBottom: 2,
   },
 });
 
