@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import typo from '../ui-kit/text/typo';
+import fonts from '../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   defaultStyle: {
@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   textCounter: {
-    ...typo.GroteskBold14,
+    ...fonts.GroteskBold14,
     lineHeight: 18,
   },
   textLabel: {
-    ...typo.GroteskSemibold14,
+    ...fonts.GroteskSemibold14,
     lineHeight: 18,
     color: '#8672BB',
   },

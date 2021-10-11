@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import typo from '../ui-kit/text/typo';
+import fonts from '../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   containerItem: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   text: {
-    ...typo.GroteskMedium14,
+    ...fonts.GroteskMedium14,
     color: '#C3B8E0',
     textAlign: 'auto',
   },

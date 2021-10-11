@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import typo from '../ui-kit/text/typo';
+import fonts from '../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   textTitle: {
-    ...typo.GroteskBold16,
+    ...fonts.GroteskBold16,
     color: '#ECEBED',
   },
 });

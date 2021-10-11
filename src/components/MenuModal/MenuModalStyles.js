@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import typo from '../ui-kit/text/typo';
+import fonts from '../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   containerBackground: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     text: {
-      ...typo.GroteskBold16,
+      ...fonts.GroteskBold16,
     },
   },
 });

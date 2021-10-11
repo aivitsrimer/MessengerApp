@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import typo from '../ui-kit/text/typo';
+import fonts from '../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   textCounter: {
-    ...typo.GroteskRegular16,
+    ...fonts.GroteskRegular16,
     fontSize: 14,
     color: '#8672BB',
     textAlign: 'center',
     paddingLeft: 6,
   },
   textLabel: {
-    ...typo.GroteskRegular16,
+    ...fonts.GroteskRegular16,
     lineHeight: 20,
   },
   photo: {
