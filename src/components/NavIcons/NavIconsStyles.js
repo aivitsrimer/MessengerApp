@@ -10,12 +10,12 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   iconArrow: {
-    position: 'absolute',
+    justifyContent: 'flex-start',
     left: 0,
     top: 0,
   },
   iconMenu: {
-    position: 'absolute',
+    justifyContent: 'flex-end',
     right: 0,
     top: 0,
     transform: [{rotate: '90deg'}],
