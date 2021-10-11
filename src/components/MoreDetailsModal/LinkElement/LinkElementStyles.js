@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import fonts from '../ui-kit/text/fonts';
+import fonts from '../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   containerItem: {
@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     ...fonts.GroteskMedium14,
     color: '#C3B8E0',
     textAlign: 'auto',
-    width: '70%',
   },
 });
 

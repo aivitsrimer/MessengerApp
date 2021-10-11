@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Modal} from 'react-native';
-import {MoreDetails} from '../MoreDetails';
+import {MoreDetails} from './MoreDetails';
 import styles from './MoreDetailsModalStyles';
 
 export const MoreDetailsModal = props => {

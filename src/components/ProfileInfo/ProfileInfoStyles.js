@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
   },
   textWork: {
     ...fonts.GroteskRegular16,
-    lineHeight: 20,
     marginBottom: 8,
   },
 });

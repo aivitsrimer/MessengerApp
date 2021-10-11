@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import fonts from '../ui-kit/text/fonts';
+import fonts from '../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   defaultStyle: {
@@ -16,11 +16,9 @@ const styles = StyleSheet.create({
   },
   textCounter: {
     ...fonts.GroteskBold14,
-    lineHeight: 18,
   },
   textLabel: {
     ...fonts.GroteskSemibold14,
-    lineHeight: 18,
     color: '#8672BB',
   },
 });

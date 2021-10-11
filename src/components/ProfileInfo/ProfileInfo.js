@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {MessengerButton, MessengerImage, MessengerText} from '../ui-kit';
-import {FollowingInfo} from '../FollowingInfo';
+import {FollowingInfo} from './FollowingInfo';
 import styles from './ProfileInfoStyles';
 
 export const ProfileInfo = props => {

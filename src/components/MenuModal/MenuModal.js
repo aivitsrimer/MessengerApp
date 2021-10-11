@@ -1,6 +1,6 @@
 import React from 'react';
 import {Modal, View} from 'react-native';
-import {MenuElement} from '../MenuElement';
+import {MenuElement} from './MenuElement';
 import {Divider} from '../Divider';
 import styles from './MenuModalStyles';
 

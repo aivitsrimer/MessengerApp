@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
-import {MessengerText} from '../ui-kit';
-import {Icon} from '../../../assets/icons';
+import {MessengerText} from '../../ui-kit';
+import {Icon} from '../../../../assets/icons';
 import {DetailsElement} from '../DetailsElement';
-import {Divider} from '../Divider';
+import {Divider} from '../../Divider';
 import {LinkElement} from '../LinkElement';
 import styles from './MoreDetailsStyles';
 

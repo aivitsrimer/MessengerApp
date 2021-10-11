@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     fontFamily: 'HKGrotesk-Regular',
     fontStyle: 'normal',
     fontSize: 14,
-    lineHeight: 16,
     textAlign: 'center',
     color: '#FFFFFF',
   },

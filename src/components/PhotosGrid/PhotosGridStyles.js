@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
   },
   textLabel: {
     ...fonts.GroteskRegular16,
-    lineHeight: 20,
   },
   photo: {
     marginBottom: 3,

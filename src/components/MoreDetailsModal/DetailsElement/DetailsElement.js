@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Icon} from '../../../assets/icons';
-import {MessengerText} from '../ui-kit';
+import {Icon} from '../../../../assets/icons';
+import {MessengerText} from '../../ui-kit';
 import styles from './DetailsElementsStyle';
 
 export const DetailsElement = props => (

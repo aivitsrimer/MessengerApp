@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {MessengerText} from '../ui-kit';
+import {MessengerText} from '../../ui-kit';
 import styles from './FollowingInfoStyles';
 
 export const FollowingInfo = () => {
