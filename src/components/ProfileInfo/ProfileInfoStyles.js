@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../ui-kit/text/fonts';
+import colors from '../../../assets/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,18 +25,18 @@ const styles = StyleSheet.create({
   },
   textName: {
     ...fonts.GroteskBold16,
-    color: '#ECEBED',
+    color: colors.LAVENDER,
     marginBottom: 6,
   },
   textAccount: {
     ...fonts.GroteskRegular16,
     fontSize: 12,
-    color: '#8672BB',
+    color: colors.PERL_PURPLE,
     marginBottom: 29,
   },
   textLocation: {
     ...fonts.GroteskMedium14,
-    color: '#8672BB',
+    color: colors.PERL_PURPLE,
     marginBottom: 8,
   },
   textWork: {

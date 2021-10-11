@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../ui-kit/text/fonts';
+import colors from '../../../../assets/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -7,7 +8,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: '#2B2146',
+    backgroundColor: colors.ULTRAMARINE_BLUE,
   },
   icon: {
     marginRight: 9,

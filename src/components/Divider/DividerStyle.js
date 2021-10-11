@@ -1,10 +1,11 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../../assets/colors';
 
 const styles = StyleSheet.create({
   divider: {
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: '#3B2D5F',
+    borderColor: colors.MODERATE_PURPLISH_BLUE,
   },
 });
 

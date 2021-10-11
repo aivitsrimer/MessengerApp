@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../ui-kit/text/fonts';
+import colors from '../../../assets/colors';
 
 const styles = StyleSheet.create({
   containerBackground: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
     height: 161,
   },
   containerButtons: {
-    backgroundColor: '#2B2146',
+    backgroundColor: colors.ULTRAMARINE_BLUE,
   },
   backButton: {
     container: {

@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../ui-kit/text/fonts';
+import colors from '../../../../assets/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     ...fonts.GroteskBold16,
-    color: '#ECEBED',
+    color: colors.LAVENDER,
   },
   divider: {
     marginTop: 5,

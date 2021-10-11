@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../../assets/colors';
 
 const styles = StyleSheet.create({
   defaultBackground: {
-    backgroundColor: '#2B2146',
+    backgroundColor: colors.ULTRAMARINE_BLUE,
   },
   defaultStyle: {
     paddingHorizontal: 16,
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    color: '#FFFFFF',
+    color: colors.WHITE,
   },
   divider: {
     flex: 1,

@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../ui-kit/text/fonts';
+import colors from '../../../assets/colors';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   textCounter: {
     ...fonts.GroteskRegular16,
     fontSize: 14,
-    color: '#8672BB',
+    color: colors.PERL_PURPLE,
     textAlign: 'center',
     paddingLeft: 6,
   },

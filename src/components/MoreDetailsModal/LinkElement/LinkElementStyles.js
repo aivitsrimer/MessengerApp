@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../ui-kit/text/fonts';
+import colors from '../../../../assets/colors';
 
 const styles = StyleSheet.create({
   containerItem: {
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   },
   text: {
     ...fonts.GroteskMedium14,
-    color: '#C3B8E0',
+    color: colors.PERIWINKLE_CRAYOLA,
     textAlign: 'auto',
   },
 });

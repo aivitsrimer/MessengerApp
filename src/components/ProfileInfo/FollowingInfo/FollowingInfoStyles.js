@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../ui-kit/text/fonts';
+import colors from '../../../../assets/colors';
 
 const styles = StyleSheet.create({
   defaultStyle: {
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
   },
   textLabel: {
     ...fonts.GroteskSemibold14,
-    color: '#8672BB',
+    color: colors.PERL_PURPLE,
   },
 });
 
