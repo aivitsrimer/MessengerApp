@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   containerItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 15,
+    marginBottom: 13,
   },
   icon: {
     marginRight: 9,

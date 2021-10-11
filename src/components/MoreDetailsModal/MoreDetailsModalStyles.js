@@ -1,18 +1,16 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  modalContainer: {
+  containerBackground: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginTop: 15,
   },
-  modal: {
-    flex: 0.75,
-    elevation: 20,
+  containerModal: {
     backgroundColor: '#2B2146',
     overflow: 'hidden',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
+    height: 543,
   },
 });
 

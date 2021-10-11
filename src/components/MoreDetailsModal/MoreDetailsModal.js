@@ -6,7 +6,7 @@ import styles from './MoreDetailsModalStyles';
 export const MoreDetailsModal = props => {
   const [backgroundAlpha, setBackgroundAlpha] = useState('none');
 
-  const modalContainerStyles = {...styles.modalContainer, backgroundColor: backgroundAlpha};
+  const modalContainerStyles = {...styles.containerBackground, backgroundColor: backgroundAlpha};
 
   return (
     <Modal
@@ -21,7 +21,7 @@ export const MoreDetailsModal = props => {
         setBackgroundAlpha('none');
       }}>
       <View style={modalContainerStyles}>
-        <View style={styles.modal}>
+        <View style={styles.containerModal}>
           <MoreDetails setModalVisible={props.setModalVisible} />
         </View>
       </View>

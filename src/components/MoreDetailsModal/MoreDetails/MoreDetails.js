@@ -79,7 +79,7 @@ export const MoreDetails = props => {
         </TouchableOpacity>
       </View>
       {detailsElements}
-      <Divider />
+      <Divider style={styles.divider} />
       <View style={styles.containerTitle}>
         <MessengerText text="Контакты" style={styles.textTitle} />
       </View>

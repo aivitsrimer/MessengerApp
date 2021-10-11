@@ -3,22 +3,23 @@ import fonts from '../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     marginHorizontal: 16,
-    paddingTop: 13,
+    paddingTop: 10,
     paddingBottom: 49,
   },
   containerTitle: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingTop: 20,
-    paddingBottom: 30,
+    marginBottom: 25,
   },
   textTitle: {
     ...fonts.GroteskBold16,
     color: '#ECEBED',
+  },
+  divider: {
+    marginTop: 5,
   },
 });
 

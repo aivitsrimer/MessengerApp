@@ -24,7 +24,7 @@ export const MenuModal = props => {
         props.setModalVisible(!props.modalVisible);
       }}>
       <View style={styles.containerBackground}>
-        <View style={styles.container}>
+        <View style={styles.containerModal}>
           <View style={styles.containerButtons}>
             <MenuElement icon="share" onPress={shareButtonHandler}>
               Поделиться

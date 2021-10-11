@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(0,0,0,0.6)',
   },
-  container: {
+  containerModal: {
     height: 161,
   },
   containerButtons: {
