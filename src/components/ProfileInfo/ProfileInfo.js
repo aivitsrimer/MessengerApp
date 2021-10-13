@@ -8,7 +8,7 @@ export const ProfileInfo = props => {
   return (
     <>
       <View style={styles.container}>
-        <MessengerImage style={styles.profilePhoto} path={require('../../../assets/images/profilePhoto.jpg')} />
+        <MessengerImage style={styles.profilePhoto} path={require('../../assets/images/profilePhoto.jpg')} />
         <MessengerText text="Kat Williams" style={styles.textName} />
         <MessengerText text="@Williams" style={styles.textAccount} />
         <MessengerText text="Россия, Санкт-Петербург" style={styles.textLocation} />

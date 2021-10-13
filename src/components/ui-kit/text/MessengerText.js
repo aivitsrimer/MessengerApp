@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import fonts from './fonts';
-import colors from '../../../../assets/colors';
+import colors from '../../../assets/colors';
 
 export const MessengerText = props => (
   <Text style={{...styles.defaultText, ...props.style}}>

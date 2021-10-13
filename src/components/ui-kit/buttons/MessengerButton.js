@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, StyleSheet} from 'react-native';
 import {MessengerText} from '../text/MessengerText';
 import fonts from '../text/fonts';
-import colors from '../../../../assets/colors';
+import colors from '../../../assets/colors';
 
 export const MessengerButton = props => (
   <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>

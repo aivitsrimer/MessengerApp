@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import {Linking, TouchableOpacity} from 'react-native';
-import {Icon} from '../../../../assets/icons';
+import {Icon} from '../../../assets/icons';
 import {MessengerText} from '../../ui-kit';
 import styles from './LinkElementStyles';
 
