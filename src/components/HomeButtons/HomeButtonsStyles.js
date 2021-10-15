@@ -5,26 +5,25 @@ const styles = StyleSheet.create({
   iconsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
     width: '100%',
     marginTop: 30,
     backgroundColor: colors.ULTRAMARINE_BLUE,
   },
+  rightIconsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.ULTRAMARINE_BLUE,
+  },
   iconMenu: {
-    // justifyContent: 'flex-start',
-    right: 0,
-    top: 0,
+    color: colors.LAVENDER,
   },
   iconSearch: {
-    justifyContent: 'flex-end',
-    left: 58,
-    top: 0,
+    color: colors.LAVENDER,
+    marginRight: 20,
   },
   iconAlert: {
-    justifyContent: 'flex-end',
-    right: 0,
-    top: 0,
-    transform: [{rotate: '90deg'}],
+    color: colors.LAVENDER,
   },
 });
 
