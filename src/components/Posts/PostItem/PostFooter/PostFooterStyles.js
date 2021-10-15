@@ -1,29 +1,36 @@
 import {StyleSheet} from 'react-native';
 import color from '../../../../assets/colors';
+import fonts from '../../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 12,
     backgroundColor: color.ULTRAMARINE_BLUE,
+  },
+  containerSocial: {
+    flexDirection: 'row',
   },
   containerLike: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    marginRight: 20,
   },
   containerComments: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   text: {
-    color: color.SAPPHIRE_BLUE,
+    color: color.WHITE,
+    ...fonts.GroteskSemibold14,
   },
   iconLike: {
     icon: {
       color: color.WHITE,
     },
     container: {
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
+      marginRight: 8,
     },
   },
   iconComments: {
@@ -31,8 +38,8 @@ const styles = StyleSheet.create({
       color: color.WHITE,
     },
     container: {
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
+      // flexDirection: 'row',
+      marginRight: 8,
     },
   },
   iconBookmark: {

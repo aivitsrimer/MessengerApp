@@ -2,11 +2,9 @@ import React from 'react';
 import {Alert, View} from 'react-native';
 import {MessengerImage, MessengerText, MessengerTouchableIcon} from '../../../ui-kit';
 import styles from './PostHeaderStyles';
-import path from '../../../../assets/images/profilePhoto.jpg';
+import colors from '../../../../assets/colors';
 
 export const PostHeader = props => {
-  const path = require('../../../../assets/images/profilePhoto.jpg');
-  // debugger;
 
   return (
     <View style={styles.container}>
@@ -21,6 +19,7 @@ export const PostHeader = props => {
       </View>
       <MessengerTouchableIcon
         onPress={() => Alert.alert('Open post')}
+        color={colors.PERL_PURPLE}
         name="dots-vertical"
         styles={styles.iconStyles}
       />

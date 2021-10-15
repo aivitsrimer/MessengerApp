@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 32,
     width: '100%',
-    marginVertical: 10,
+    marginTop: 12,
     backgroundColor: color.ULTRAMARINE_BLUE,
   },
   containerData: {
@@ -44,13 +44,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: color.PERL_PURPLE,
     ...fonts.GroteskMedium12,
-  },
-  iconStyles: {
-    justifyContent: 'flex-end',
-
-    icon: {
-      color: color.PERL_PURPLE,
-    },
   },
 });
 

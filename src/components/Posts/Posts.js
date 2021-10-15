@@ -7,10 +7,10 @@ const DATA = {
   name: 'Kat Williams',
   date: '1h ago',
   content: {
-    text: 'Bla bla',
+    text: 'Writing code is not so bad!',
   },
-  likesCount: '123',
-  commentsCount: '321',
+  likesCount: '8,998',
+  commentsCount: '145',
 };
 
 export const Posts = () => {
