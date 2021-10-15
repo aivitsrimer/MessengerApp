@@ -9,8 +9,8 @@ const DATA = {
   content: {
     text: 'Writing code is not so bad!',
   },
-  likesCount: '8,998',
-  commentsCount: '145',
+  likesCount: '14',
+  commentsCount: '0',
 };
 
 export const Posts = () => {

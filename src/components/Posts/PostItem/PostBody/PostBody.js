@@ -17,14 +17,10 @@ export const PostBody = props => {
     }
     if (props.content?.text) {
       return (
-        <MessengerText>Post Text</MessengerText>
+        <MessengerText style={styles.text}>{props.content.text}</MessengerText>
       );
     }
   }
 
-  return (
-    <View>
-      <View>{getContent()}</View>
-    </View>
-  );
+  return <View style={styles.container}>{getContent()}</View>;
 };
