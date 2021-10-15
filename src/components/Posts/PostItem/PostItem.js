@@ -7,10 +7,10 @@ import {Divider} from '../../Divider';
 
 export const PostItem = props => {
   return (
-    <View style={{height:500}}>
-      <PostHeader photo={props.photo} name={props.name} date={props.date} />
-      {/*<PostBody content={props.content} />*/}
-      {/*<PostFooter likesCount={props.likesCount} commentsCount={props.commentsCount} />*/}
+    <View>
+      <PostHeader photo={props.data.photo} name={props.data.name} date={props.data.date} />
+      <PostBody content={props.data.content} />
+      <PostFooter likesCount={props.data.likesCount} commentsCount={props.data.commentsCount} />
       <Divider />
     </View>
   );

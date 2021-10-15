@@ -3,9 +3,9 @@ import {View} from 'react-native';
 import {PostItem} from './PostItem';
 
 const DATA = {
-  photo: require('./../../assets/images/profilePhoto.jpg'),
-  name: 'Anna Vits-Rimer',
-  date: '1 day ago',
+  photo: require('./../../assets/images/profilePhoto2.jpg'),
+  name: 'Kat Williams',
+  date: '1h ago',
   content: {
     text: 'Bla bla',
   },
@@ -15,8 +15,8 @@ const DATA = {
 
 export const Posts = () => {
   return (
-    <View style={{ width: '100%'}}>
-      <PostItem props={DATA} />
+    <View style={{width: '100%'}}>
+      <PostItem data={DATA} />
     </View>
   );
 };
