@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   image: {
     width: 343,
     height: 180,
-    borderRadius: 18,
+    borderRadius: 16,
     overflow: 'hidden',
   },
   text: {
