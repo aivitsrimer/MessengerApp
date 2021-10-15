@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import {PostHeader} from './PostHeader';
 import {PostFooter} from './PostFooter';
 import {PostBody} from './PostBody';
+
 export const PostItem = props => {
   return (
     <View>

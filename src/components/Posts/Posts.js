@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {PostItem} from './PostItem';
+import styles from './PostsStyles';
 
 const DATA = {
   post1: {
@@ -47,7 +48,7 @@ const DATA = {
 
 export const Posts = () => {
   return (
-    <View style={{width: '100%'}}>
+    <View style={styles.container}>
       <PostItem data={DATA.post1} />
       <PostItem data={DATA.post2} />
       <PostItem data={DATA.post3} />

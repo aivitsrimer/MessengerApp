@@ -3,8 +3,6 @@ import color from '../../../../assets/colors';
 import fonts from '../../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
-  // container: {
-  // },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -40,7 +38,6 @@ const styles = StyleSheet.create({
       color: color.WHITE,
     },
     container: {
-      // flexDirection: 'row',
       marginRight: 8,
     },
   },

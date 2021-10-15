@@ -12,12 +12,7 @@ export const PostFooter = props => {
       <View style={styles.container}>
         <View style={styles.containerSocial}>
           <View style={styles.containerLike}>
-            <MessengerTouchableIcon
-              onPress={() => Alert.alert('Open like')}
-              name="like"
-              style={styles.iconLike}
-            >
-            </MessengerTouchableIcon>
+            <MessengerTouchableIcon onPress={() => Alert.alert('Open like')} name="like" style={styles.iconLike} />
             <MessengerText text={props.likesCount} style={styles.text} />
           </View>
           {showComments && (
@@ -26,8 +21,7 @@ export const PostFooter = props => {
                 onPress={() => Alert.alert('Open Comments')}
                 name="chat"
                 style={styles.iconComments}
-              >
-              </MessengerTouchableIcon>
+              />
               <MessengerText text={props.commentsCount} style={styles.text} />
             </View>
           )}
