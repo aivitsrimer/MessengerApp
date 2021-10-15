@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 22,
   },
+  image: {
+    width: 343,
+    height: 180,
+    borderRadius: 18,
+    overflow: 'hidden',
+  },
   text: {
     ...fonts.GroteskMedium12,
     color: colors.PERIWINKLE_CRAYOLA,

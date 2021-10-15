@@ -7,12 +7,12 @@ export const PostBody = props => {
   function getContent() {
     if (props.content?.images) {
       return (
-        <MessengerText>Post Slider</MessengerText>
+        <MessengerImage src={props.content.image} style={styles.image}/>
       );
     }
     if (props.content?.image) {
       return (
-        <MessengerText>Post Image</MessengerText>
+        <MessengerImage path={props.content.image} style={styles.image}/>
       );
     }
     if (props.content?.text) {

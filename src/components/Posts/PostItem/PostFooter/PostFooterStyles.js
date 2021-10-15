@@ -3,6 +3,8 @@ import color from '../../../../assets/colors';
 import fonts from '../../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
+  // container: {
+  // },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -49,6 +51,9 @@ const styles = StyleSheet.create({
     container: {
       justifyContent: 'flex-end',
     },
+  },
+  divider: {
+    marginBottom: 24,
   },
 });
 
