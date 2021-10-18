@@ -1,20 +1,8 @@
 import React from 'react';
 import {DrawerContentScrollView, DrawerItem, DrawerItemList} from '@react-navigation/drawer';
-import {Alert, View} from 'react-native';
-import {MessengerImage, MessengerText} from '../ui-kit';
+import {Alert} from 'react-native';
 import colors from '../../assets/colors';
-
-function DrawerHeader() {
-  return (
-    <View>
-      <MessengerImage path={require('../../assets/images/profilePhoto.jpg')} />
-      <View>
-        <MessengerText text="hahah" style={{color: 'black'}} />
-        <MessengerText text="hahah1" style={{color: 'black'}} />
-      </View>
-    </View>
-  );
-}
+import {DrawerHeader} from './DrawerHeader';
 
 export const DrawerContent = props => {
   return (
