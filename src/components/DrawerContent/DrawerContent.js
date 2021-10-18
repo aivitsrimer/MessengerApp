@@ -1,15 +1,21 @@
 import React from 'react';
-import {DrawerContentScrollView, DrawerItem, DrawerItemList} from '@react-navigation/drawer';
-import {Alert} from 'react-native';
-import colors from '../../assets/colors';
+import {DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer';
 import {DrawerHeader} from './DrawerHeader';
+import styles from './DrawerContentStyles';
 
 export const DrawerContent = props => {
   return (
-    <DrawerContentScrollView {...props} style={{backgroundColor: colors.ULTRAMARINE_BLUE}}>
+    <DrawerContentScrollView {...props} style={styles.defaultBackground} labelStyle={styles.title}>
       <DrawerHeader />
-      <DrawerItem label="Help1" onPress={() => Alert.alert('Open menu')} />
-      <DrawerItemList {...props} />
+      <DrawerItemList
+        {...props}
+        // activeTintColor="#ff0000"
+        // activeBackgroundColor="rgba(0, 0, 0, .04)"
+        // inactiveTintColor="rgba(0, 0, 0, .87)"
+        // inactiveBackgroundColor="transparent"
+        // itemStyle={{backgroundColor: '#0000ff'}}
+        // labelStyle={{color: '#ff0000'}}
+      />
     </DrawerContentScrollView>
   );
 };

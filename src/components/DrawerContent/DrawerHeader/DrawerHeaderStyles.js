@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'left',
     marginTop: 29,
+    marginBottom: 60,
   },
   profilePhoto: {
     borderRadius: 90,
