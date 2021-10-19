@@ -2,9 +2,8 @@ import React from 'react';
 import {Alert, TouchableOpacity, View} from 'react-native';
 import {Icon} from '../../assets/icons';
 import styles from './HomeButtonsStyles';
-import colors from '../../assets/colors';
 
-export const HomeButtons = (props) => {
+export const HomeButtons = props => {
   return (
     <View style={styles.iconsContainer}>
       <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
