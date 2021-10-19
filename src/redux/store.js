@@ -59,71 +59,76 @@ let store = {
       },
       photoGrid: {
         photosList: [
-          require('../../assets/images/photo1.jpg'),
-          require('../../assets/images/photo2.jpg'),
-          require('../../assets/images/photo3.jpg'),
-          require('../../assets/images/photo4.jpg'),
-          require('../../assets/images/photo5.jpg'),
-          require('../../assets/images/photo6.jpg'),
-          require('../../assets/images/photo7.jpg'),
-          require('../../assets/images/photo8.jpg'),
-          require('../../assets/images/photo9.jpg'),
-          require('../../assets/images/photo1.jpg'),
-          require('../../assets/images/photo2.jpg'),
-          require('../../assets/images/photo3.jpg'),
-          require('../../assets/images/photo4.jpg'),
-          require('../../assets/images/photo5.jpg'),
-          require('../../assets/images/photo6.jpg'),
-          require('../../assets/images/photo7.jpg'),
-          require('../../assets/images/photo8.jpg'),
-          require('../../assets/images/photo9.jpg'),
+          require('../assets/images/photo1.jpg'),
+          require('../assets/images/photo2.jpg'),
+          require('../assets/images/photo3.jpg'),
+          require('../assets/images/photo4.jpg'),
+          require('../assets/images/photo5.jpg'),
+          require('../assets/images/photo6.jpg'),
+          require('../assets/images/photo7.jpg'),
+          require('../assets/images/photo8.jpg'),
+          require('../assets/images/photo9.jpg'),
+          require('../assets/images/photo1.jpg'),
+          require('../assets/images/photo2.jpg'),
+          require('../assets/images/photo3.jpg'),
+          require('../assets/images/photo4.jpg'),
+          require('../assets/images/photo5.jpg'),
+          require('../assets/images/photo6.jpg'),
+          require('../assets/images/photo7.jpg'),
+          require('../assets/images/photo8.jpg'),
+          require('../assets/images/photo9.jpg'),
         ],
       },
-      posts: {
-        postData: {
-          post1: {
-            photo: require('./../../assets/images/profilePhoto2.png'),
-            name: 'Kat Williams',
-            date: '1h ago',
-            content: {
-              image: require('./../../assets/images/postPhoto1.png'),
+      homePage: {
+        posts: {
+          postData: {
+            post1: {
+              photo: require('../assets/images/profilePhoto2.png'),
+              name: 'Kat Williams',
+              date: '1h ago',
+              content: {
+                image: require('../assets/images/postPhoto1.png'),
+              },
+              likesCount: '8,998',
+              commentsCount: '145',
             },
-            likesCount: '8,998',
-            commentsCount: '145',
-          },
-          post2: {
-            photo: require('./../../assets/images/profilePhoto3.png'),
-            name: 'Tony Monta',
-            date: '1h ago',
-            content: {
-              text: 'Writing code is not so bad!',
+            post2: {
+              photo: require('../assets/images/profilePhoto3.png'),
+              name: 'Tony Monta',
+              date: '1h ago',
+              content: {
+                text: 'Writing code is not so bad!',
+              },
+              likesCount: '14',
+              commentsCount: '0',
             },
-            likesCount: '14',
-            commentsCount: '0',
-          },
-          post3: {
-            photo: require('./../../assets/images/profilePhoto.jpg'),
-            name: 'Jessica Thompson',
-            date: '2h ago',
-            content: {
-              image: require('./../../assets/images/postPhoto3.png'),
+            post3: {
+              photo: require('../assets/images/profilePhoto.jpg'),
+              name: 'Jessica Thompson',
+              date: '2h ago',
+              content: {
+                image: require('../assets/images/postPhoto3.png'),
+              },
+              likesCount: '17',
+              commentsCount: '2',
             },
-            likesCount: '17',
-            commentsCount: '2',
-          },
-          post4: {
-            photo: require('./../../assets/images/profilePhoto4.png'),
-            name: 'Dustin Grant',
-            date: '3h ago',
-            content: {
-              image: require('./../../assets/images/postPhoto4.png'),
+            post4: {
+              photo: require('../assets/images/profilePhoto4.png'),
+              name: 'Dustin Grant',
+              date: '3h ago',
+              content: {
+                image: require('../assets/images/postPhoto4.png'),
+              },
+              likesCount: '238',
+              commentsCount: '14',
             },
-            likesCount: '238',
-            commentsCount: '14',
           },
         },
       },
     },
+  },
+  getState() {
+    return this._state;
   },
 };
 
