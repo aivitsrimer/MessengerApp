@@ -4,7 +4,7 @@ import {MessengerStatusBar} from '../../components/ui-kit';
 import {NavIcons} from '../../components/NavIcons';
 import {ProfileInfo} from '../../components/ProfileInfo';
 import {Divider} from '../../components/Divider';
-import {PhotosGrid} from '../../components/PhotosGrid';
+import {MyPhotosGrid, PhotosGrid} from '../../components/PhotosGrid';
 import {MoreDetailsModal} from '../../components/MoreDetailsModal';
 import {MenuModal} from '../../components/MenuModal';
 import styles from './ProfileScreenStyles';
@@ -21,7 +21,7 @@ export const ProfileScreen = () => {
           <NavIcons setModalVisible={setModalMenuVisible} />
           <ProfileInfo setModalVisible={setModalDetailsVisible} />
           <Divider style={styles.divider} />
-          <PhotosGrid />
+          <MyPhotosGrid />
         </View>
         <MoreDetailsModal modalVisible={modalDetailsVisible} setModalVisible={setModalDetailsVisible} />
         <MenuModal modalVisible={modalMenuVisible} setModalVisible={setModalMenuVisible} />
