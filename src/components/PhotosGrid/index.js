@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 let mapStateToProps = state => {
   return {
-    moreDetails: state.profilePage.moreDetails,
     photoGrid: state.profilePage.photoGrid,
   };
 };

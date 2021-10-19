@@ -20,13 +20,12 @@ export const Root = () => {
   };
 
   const homeElement = <Drawer.Screen name="Home" component={HomeScreen} />;
-  // debugger;
 
   return (
     <Drawer.Navigator
       screenOptions={{
         headerShown: false,
-        drawerLabelStyle: {color: colors.WHITE, ...fonts.GroteskBold16, marginLeft: -20},
+        drawerLabelStyle: {color: colors.WHITE, ...fonts.GroteskBold16, marginLeft: 0},
         drawerContainerStyle: {backgroundColor: 'red'},
       }}
       initialRouteName="Home"

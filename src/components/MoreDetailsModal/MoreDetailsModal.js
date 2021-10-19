@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Modal} from 'react-native';
-import {MoreDetails} from './MoreDetails';
+import {MyMoreDetails} from './MoreDetails';
 import styles from './MoreDetailsModalStyles';
 
 export const MoreDetailsModal = props => {
@@ -22,7 +22,7 @@ export const MoreDetailsModal = props => {
       }}>
       <View style={modalContainerStyles}>
         <View style={styles.containerModal}>
-          <MoreDetails setModalVisible={props.setModalVisible} />
+          <MyMoreDetails setModalVisible={props.setModalVisible} />
         </View>
       </View>
     </Modal>

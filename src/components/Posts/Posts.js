@@ -3,8 +3,7 @@ import {View} from 'react-native';
 import {PostItem} from './PostItem';
 import styles from './PostsStyles';
 
-export const Posts = (props) => {
-  // debugger;
+export const Posts = props => {
   return (
     <View style={styles.container}>
       <PostItem data={props.postsData.post1} />
