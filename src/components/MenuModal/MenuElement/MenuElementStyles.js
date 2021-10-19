@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 13,
     paddingBottom: 11,
-    paddingHorizontal: 16,
     backgroundColor: colors.ULTRAMARINE_BLUE,
   },
   icon: {

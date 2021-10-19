@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   },
   containerButtons: {
     backgroundColor: colors.ULTRAMARINE_BLUE,
+    paddingHorizontal: 16,
   },
   backButton: {
     container: {
