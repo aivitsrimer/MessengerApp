@@ -11,62 +11,18 @@ import {FriendsScreen} from './screens/FriendsScreen';
 import {SearchScreen} from './screens/SearchScreen';
 import {SettingsScreen} from './screens/SettingsScreen';
 import fonts from './components/ui-kit/text/fonts';
+import {Root} from './screens/Root';
 
-// const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const drawerIcon = name => {
-    return ({focused}) => (
-      <Icon name={name} size={24} color={focused ? colors.WHITE : colors.WHITE} style={{width: 24}} />
-    );
-  };
 
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        screenOptions={{
-          headerShown: false,
-          drawerLabelStyle: {color: colors.WHITE, ...fonts.GroteskBold16, marginLeft: -20},
-          drawerContainerStyle: {backgroundColor: 'red'},
-        }}
-        initialRouteName="Home"
-        drawerContent={DrawerContent}
-        style={{backgroundColor: colors.ULTRAMARINE_BLUE}}>
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen
-          name="Profile"
-          component={ProfileScreen}
-          options={{
-            title: 'Мой профиль',
-            drawerIcon: drawerIcon('profile'),
-          }}
-        />
-        <Drawer.Screen
-          name="Friends"
-          component={FriendsScreen}
-          options={{
-            title: 'Друзья',
-            drawerIcon: drawerIcon('group'),
-          }}
-        />
-        <Drawer.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{
-            title: 'Поиск',
-            drawerIcon: drawerIcon('search'),
-          }}
-        />
-        <Drawer.Screen
-          name="Settings"
-          component={SettingsScreen}
-          options={{
-            title: 'Настройки',
-            drawerIcon: drawerIcon('settings'),
-          }}
-        />
-      </Drawer.Navigator>
+      <Stack.Navigator initialRouteName="Root">
+        <Stack.Screen name="Root" component={Root} options={{headerShown: false}} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
