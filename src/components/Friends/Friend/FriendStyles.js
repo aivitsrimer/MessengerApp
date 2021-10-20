@@ -1,38 +1,15 @@
 import {StyleSheet} from 'react-native';
-import colors from '../../assets/colors';
-import fonts from '../ui-kit/text/fonts';
-import color from '../../assets/colors';
+import colors from '../../../assets/colors';
+import fonts from '../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    width: '100%',
-    backgroundColor: colors.ULTRAMARINE_BLUE,
-  },
-  containerHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    marginVertical: 15,
-  },
-  iconBack: {
-    marginRight: 20,
-  },
-  containerTitle: {
-    justifyContent: 'center',
-    width: '100%',
-  },
-  title: {
-    textAlign: 'center',
-    ...fonts.GroteskBold16,
-    color: colors.WHITE,
-  },
-  containerData: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
     height: 43,
     width: '100%',
+    marginVertical: 10,
   },
   containerImage: {
     flexDirection: 'column',
@@ -51,12 +28,12 @@ const styles = StyleSheet.create({
   },
   textName: {
     textAlign: 'left',
-    color: color.LAVENDER,
+    color: colors.LAVENDER,
     ...fonts.GroteskBold14,
   },
   textLocation: {
     textAlign: 'left',
-    color: color.PERL_PURPLE,
+    color: colors.PERL_PURPLE,
     ...fonts.GroteskMedium12,
   },
 });
