@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, View} from 'react-native';
+import {View} from 'react-native';
 import {MessengerText, MessengerTouchableIcon} from '../ui-kit';
 import {Icon} from '../../assets/icons';
 import styles from './SettingsStyles';
@@ -13,7 +13,7 @@ export const Settings = props => {
             name={'arrow-left'}
             size={18}
             style={styles.iconBack}
-            onPress={() => props.navigation.navigate('Home')}
+            onPress={() => props.navigation.goBack()}
           />
         </View>
         <View style={styles.containerTitle}>

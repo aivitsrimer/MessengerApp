@@ -101,11 +101,18 @@ const FriendElements = FriendsList.map(item => (
   <Friend path={item.photo} name={item.name} location={item.location} key={item.id} />
 ));
 
-export const Friends = () => {
+export const Friends = props => {
   return (
     <View style={styles.container}>
       <View style={styles.containerHeader}>
-        <MessengerTouchableIcon name={'arrow-left'} size={18} style={styles.iconBack} />
+        <View style={styles.containerIcon}>
+          <MessengerTouchableIcon
+            name="arrow-left"
+            size={18}
+            style={styles.iconBack}
+            onPress={() => props.navigation.goBack()}
+          />
+        </View>
         <View style={styles.containerTitle}>
           <MessengerText text={'Друзья'} style={styles.title} />
         </View>

@@ -1,12 +1,15 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import colors from '../../assets/colors';
 import fonts from '../ui-kit/text/fonts';
 import color from '../../assets/colors';
+
+let ScreenHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+    height: ScreenHeight,
     width: '100%',
     backgroundColor: colors.ULTRAMARINE_BLUE,
   },
@@ -19,12 +22,15 @@ const styles = StyleSheet.create({
   containerIcon: {
     position: 'absolute',
     justifyContent: 'flex-start',
+    zIndex: 2,
     width: '100%',
   },
   iconBack: {
-    left: 0,
-    top: 0,
-    marginRight: 20,
+    icon: {
+      left: 0,
+      top: 0,
+      marginRight: 20,
+    },
   },
   containerTitle: {
     justifyContent: 'center',

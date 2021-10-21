@@ -4,13 +4,13 @@ import {MessengerStatusBar, MessengerText} from '../../components/ui-kit';
 import styles from '../HomeScreen/HomeScreenStyles';
 import {Friends} from '../../components/Friends';
 
-export const FriendsScreen = () => {
+export const FriendsScreen = props => {
   return (
     <SafeAreaView style={styles.defaultBackground}>
       <MessengerStatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
-          <Friends />
+          <Friends navigation={props.navigation} />
         </View>
       </ScrollView>
     </SafeAreaView>

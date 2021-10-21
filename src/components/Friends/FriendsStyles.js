@@ -12,10 +12,18 @@ const styles = StyleSheet.create({
   containerHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     marginVertical: 15,
   },
+  containerIcon: {
+    position: 'absolute',
+    justifyContent: 'flex-start',
+    zIndex: 2,
+    width: '100%',
+  },
   iconBack: {
+    left: 0,
+    top: 0,
     marginRight: 20,
   },
   containerTitle: {
