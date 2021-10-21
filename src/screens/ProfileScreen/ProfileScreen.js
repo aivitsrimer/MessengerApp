@@ -9,7 +9,7 @@ import {MoreDetailsModal} from '../../components/MoreDetailsModal';
 import {MenuModal} from '../../components/MenuModal';
 import styles from './ProfileScreenStyles';
 
-export const ProfileScreen = () => {
+export const ProfileScreen = props => {
   const [modalDetailsVisible, setModalDetailsVisible] = useState(false);
   const [modalMenuVisible, setModalMenuVisible] = useState(false);
 
@@ -18,7 +18,7 @@ export const ProfileScreen = () => {
       <MessengerStatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
-          <NavIcons setModalVisible={setModalMenuVisible} />
+          <NavIcons setModalVisible={setModalMenuVisible} navigation={props.navigation} />
           <ProfileInfo setModalVisible={setModalDetailsVisible} />
           <Divider style={styles.divider} />
           <MyPhotosGrid />
