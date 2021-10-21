@@ -9,7 +9,11 @@ export const PostItem = props => {
     <View>
       <PostHeader photo={props.data.photo} name={props.data.name} date={props.data.date} />
       <PostBody content={props.data.content} />
-      <PostFooter likesCount={props.data.likesCount} commentsCount={props.data.commentsCount} />
+      <PostFooter
+        likesCount={props.data.likesCount}
+        commentsCount={props.data.commentsCount}
+        navigation={props.navigation}
+      />
     </View>
   );
 };

@@ -6,10 +6,10 @@ import styles from './PostsStyles';
 export const Posts = props => {
   return (
     <View style={styles.container}>
-      <PostItem data={props.postsData.post1} />
+      <PostItem data={props.postsData.post1} navigation={props.navigation} />
       <PostItem data={props.postsData.post2} />
-      <PostItem data={props.postsData.post3} />
-      <PostItem data={props.postsData.post4} />
+      <PostItem data={props.postsData.post3} navigation={props.navigation} />
+      <PostItem data={props.postsData.post4} navigation={props.navigation} />
     </View>
   );
 };

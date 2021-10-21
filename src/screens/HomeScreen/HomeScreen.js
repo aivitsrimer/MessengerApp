@@ -12,7 +12,7 @@ export const HomeScreen = props => {
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
           <HomeButtons navigation={props.navigation} />
-          <MyPosts />
+          <MyPosts navigation={props.navigation} />
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -8,6 +8,7 @@ import {Root} from './screens/Root';
 import {ProfileScreen} from './screens/ProfileScreen';
 import {FriendsScreen} from './screens/FriendsScreen';
 import {SettingsScreen} from './screens/SettingsScreen';
+import {PostScreen} from './screens/PostScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ const App = () => {
           <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
           <Stack.Screen name="Friends" component={FriendsScreen} options={{headerShown: false}} />
           <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false}} />
+          <Stack.Screen name="Post" component={PostScreen} options={{headerShown: false}} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
