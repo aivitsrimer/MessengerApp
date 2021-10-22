@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
     color: color.PERIWINKLE_CRAYOLA,
     ...fonts.GroteskMedium12,
   },
+  imageComment: {
+    height: 54,
+    width: 54,
+  },
   containerInfo: {
     flexDirection: 'row',
     justifyContent: 'flex-start',

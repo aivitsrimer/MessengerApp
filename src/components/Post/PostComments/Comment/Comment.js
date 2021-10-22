@@ -25,6 +25,7 @@ export const Comment = props => {
   }
 
   function getContent() {
+    debugger;
     if (props.textComment) {
       return <MessengerText text={props.textComment} style={styles.textComment} />;
     }

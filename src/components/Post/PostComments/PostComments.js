@@ -55,6 +55,7 @@ const CommentElements = comments.map(item => (
     path={item.photo}
     name={item.name}
     textComment={item.textComment}
+    imageComment={item.imageComment}
     textDate={item.textDate}
     counterLike={item.counterLike}
     r={item.comments}
