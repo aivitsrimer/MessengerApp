@@ -6,28 +6,18 @@ import {MessengerImage, MessengerText, MessengerTouchableIcon} from '../../../ui
 export const Comment = props => {
   function getChildComment() {
     if (props.children) {
-      return (
-        <View style={styles.containerChildrenComment}>
-          <MessengerImage path={props.comments.children.path} />
-          <View style={styles.containerBodyComment}>
-            <MessengerText text={props.children.name} style={styles.comments.textName} />
-            <MessengerText text={props.children.textComment} style={styles.textComment} />
-            <View style={styles.containerInfo}>
-              <MessengerText text={props.children.textDate} style={styles.children.textDate} />
-              <TouchableOpacity onPress={() => Alert.alert('Added answer')}>
-                <MessengerText text="Ответить" style={styles.textAnswer} />
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      );
+      return props.children.map(item => <Comment {...item} isChildren={true} />);
     }
   }
 
   function getContent() {
-    debugger;
     if (props.textComment) {
-      return <MessengerText text={props.textComment} style={styles.textComment} />;
+      return (
+        <MessengerText
+          text={props.textComment}
+          style={props.isChildren ? styles.textCommentChildren : styles.textComment}
+        />
+      );
     }
     if (props.imageComment) {
       return <MessengerImage path={props.imageComment} style={styles.imageComment} />;
@@ -35,11 +25,11 @@ export const Comment = props => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={props.isChildren ? styles.containerChildren : styles.container}>
       <View style={styles.containerComment}>
         <MessengerImage path={props.path} style={styles.photo} />
         <View style={styles.containerBody}>
-          <View style={styles.containerBodyComment}>
+          <View style={props.isChildren ? styles.containerBodyCommentChildren : styles.containerBodyComment}>
             <MessengerText text={props.name} style={styles.textName} />
             {getContent()}
             <View style={styles.containerInfo}>
@@ -56,11 +46,11 @@ export const Comment = props => {
               size={18}
               style={styles.iconLike}
             />
-            <MessengerText text="56" style={styles.textLike} />
+            <MessengerText text={props.counterLike} style={styles.textLike} />
           </View>
-          {getChildComment()}
         </View>
       </View>
+      {getChildComment()}
     </View>
   );
 };

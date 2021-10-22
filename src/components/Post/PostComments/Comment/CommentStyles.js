@@ -5,13 +5,13 @@ import fonts from '../../../ui-kit/text/fonts';
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    marginVertical: 7,
+    marginTop: 17,
+    marginBottom: 0,
   },
   containerComment: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     width: '100%',
-    marginVertical: 10,
   },
   photo: {
     borderRadius: 90,
@@ -28,6 +28,11 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     width: 250,
   },
+  containerBodyCommentChildren: {
+    alignItems: 'flex-start',
+    marginLeft: 10,
+    width: 200,
+  },
   textName: {
     color: color.WHITE,
     ...fonts.GroteskBold14,
@@ -35,6 +40,12 @@ const styles = StyleSheet.create({
   textComment: {
     textAlign: 'left',
     width: 250,
+    color: color.PERIWINKLE_CRAYOLA,
+    ...fonts.GroteskMedium12,
+  },
+  textCommentChildren: {
+    textAlign: 'left',
+    width: 200,
     color: color.PERIWINKLE_CRAYOLA,
     ...fonts.GroteskMedium12,
   },
@@ -67,6 +78,10 @@ const styles = StyleSheet.create({
     color: color.WHITE,
     ...fonts.GroteskMedium12,
     marginLeft: 8,
+  },
+  containerChildren: {
+    marginLeft: 53,
+    marginTop: 15,
   },
 });
 
