@@ -51,8 +51,8 @@ let comments = [
   },
 ];
 
-const CommentElements = comments.map(item => <Comment {...item} />);
-
 export const PostComments = props => {
+  const CommentElements = comments.map(item => <Comment {...item} />);
+
   return <View style={styles.container}>{CommentElements}</View>;
 };
