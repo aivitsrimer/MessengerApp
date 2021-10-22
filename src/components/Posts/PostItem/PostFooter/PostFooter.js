@@ -18,7 +18,9 @@ export const PostFooter = props => {
           {showComments && (
             <View style={styles.containerComments}>
               <MessengerTouchableIcon
-                onPress={() => props.navigation.navigate('Post') || (() => Alert.alert('Open Comments'))}
+                onPress={
+                  props.navigation ? () => props.navigation.navigate('Post') : () => Alert.alert('Open Comments')
+                }
                 name="chat"
                 style={styles.iconComments}
               />

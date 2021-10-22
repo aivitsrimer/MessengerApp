@@ -4,7 +4,15 @@ import fonts from '../../../ui-kit/text/fonts';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     marginVertical: 22,
+  },
+  containerImage: {
+    alignItems: 'center',
+    width: '100%',
+  },
+  containerSlider: {
+
   },
   image: {
     width: 343,
