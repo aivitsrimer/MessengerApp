@@ -4,6 +4,7 @@ import styles from './PostStyles';
 import {MessengerImage, MessengerText, MessengerTouchableIcon} from '../ui-kit';
 import {Divider} from '../Divider';
 import {PostComments} from './PostComments';
+import {InputComment} from './InputComment';
 
 export const Post = props => {
   return (
@@ -53,6 +54,7 @@ export const Post = props => {
       <View style={styles.containerComments}>
         <PostComments />
       </View>
+      <InputComment />
     </View>
   );
 };
