@@ -57,7 +57,7 @@ const CommentElements = comments.map(item => (
     textComment={item.textComment}
     textDate={item.textDate}
     counterLike={item.counterLike}
-    children={item.comments}
+    r={item.comments}
     key={item.id}
   />
 ));
