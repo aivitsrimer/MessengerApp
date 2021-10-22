@@ -17,7 +17,7 @@ export const PostHeader = props => {
         </View>
       </View>
       <MessengerTouchableIcon
-        onPress={() => Alert.alert('Open post')}
+        onPress={() => Alert.alert('Open post menu')}
         color={colors.PERL_PURPLE}
         name="dots-vertical"
       />

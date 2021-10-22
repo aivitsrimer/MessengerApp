@@ -3,6 +3,7 @@ import {Alert, View} from 'react-native';
 import styles from './PostStyles';
 import {MessengerImage, MessengerText, MessengerTouchableIcon} from '../ui-kit';
 import {Divider} from '../Divider';
+import {PostComments} from './PostComments';
 
 export const Post = props => {
   return (
@@ -49,6 +50,9 @@ export const Post = props => {
         <MessengerText text="12 комментариев" style={styles.textComment} />
       </View>
       <Divider style={styles.divider} />
+      <View style={styles.containerComments}>
+        <PostComments />
+      </View>
     </View>
   );
 };
