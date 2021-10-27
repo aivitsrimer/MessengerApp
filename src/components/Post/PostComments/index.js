@@ -9,4 +9,4 @@ let mapStateToProps = state => {
 
 let MyPostComments = connect(mapStateToProps)(PostComments);
 
-export {PostComments};
+export {MyPostComments};
