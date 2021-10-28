@@ -3,6 +3,7 @@ import {SafeAreaView, ScrollView, View} from 'react-native';
 import {MessengerStatusBar} from '../../components/ui-kit';
 import styles from '../PostScreen/PostScreenStyles';
 import {Post} from '../../components/Post';
+import {InputComment} from '../../components/Post/InputComment';
 
 export const PostScreen = props => {
   return (
@@ -13,6 +14,7 @@ export const PostScreen = props => {
           <Post navigation={props.navigation} />
         </View>
       </ScrollView>
+      <InputComment style={styles.input} />
     </SafeAreaView>
   );
 };

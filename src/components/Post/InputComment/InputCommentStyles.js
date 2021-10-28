@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     backgroundColor: colors.ULTRAMARINE_BLUE,
-    marginBottom: 27,
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
   },
   input: {
     height: 36,
@@ -18,12 +20,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.SAPPHIRE_BLUE,
     borderColor: colors.SAPPHIRE_BLUE,
     color: colors.PERL_PURPLE,
+    marginLeft: 16,
+    marginBottom: 27,
+    marginTop: 4,
   },
   placeholder: {
     color: colors.PERL_PURPLE,
   },
   containerIcon: {
     marginLeft: 20,
+    marginBottom: 25,
   },
 });
 

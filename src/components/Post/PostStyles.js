@@ -115,6 +115,12 @@ const styles = StyleSheet.create({
   containerComments: {
     paddingBottom: 30,
   },
+  containerInput: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
 });
 
 export default styles;

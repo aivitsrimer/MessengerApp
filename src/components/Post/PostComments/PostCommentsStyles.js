@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     width: '100%',
+    marginBottom: 20,
   },
 });
 

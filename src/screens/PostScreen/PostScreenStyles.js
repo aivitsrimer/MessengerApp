@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: colors.WHITE,
   },
+  input: {
+    paddingHorizontal: 16,
+  },
 });
 
 export default styles;
