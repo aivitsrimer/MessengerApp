@@ -6,7 +6,11 @@ let initialState = {
         name: 'Kat Williams',
         date: '1h ago',
         content: {
-          image: require('../assets/images/postPhoto1.png'),
+          images: [
+            require('../assets/images/postPhoto1.png'),
+            require('../assets/images/postPhoto1-2.png'),
+            require('../assets/images/postPhoto1-3.png'),
+          ],
         },
         likesCount: '8,998',
         commentsCount: '145',

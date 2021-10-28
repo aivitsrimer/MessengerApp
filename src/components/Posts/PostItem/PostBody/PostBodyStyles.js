@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   containerSlider: {
-
+    alignItems: 'center',
+    width: '100%',
   },
   image: {
     width: 343,
