@@ -16,6 +16,17 @@ const styles = StyleSheet.create({
   input: {
     paddingHorizontal: 16,
   },
+  buttonUp: {
+    position: 'absolute',
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 20,
+    bottom: 109,
+    backgroundColor: colors.SAPPHIRE_BLUE,
+    borderRadius: 30,
+  },
 });
 
 export default styles;

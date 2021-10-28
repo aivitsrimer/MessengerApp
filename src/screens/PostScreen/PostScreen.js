@@ -1,6 +1,6 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View} from 'react-native';
-import {MessengerStatusBar} from '../../components/ui-kit';
+import {Alert, SafeAreaView, ScrollView, View} from 'react-native';
+import {MessengerStatusBar, MessengerTouchableIcon} from '../../components/ui-kit';
 import styles from '../PostScreen/PostScreenStyles';
 import {Post} from '../../components/Post';
 import {InputComment} from '../../components/Post/InputComment';
@@ -15,6 +15,9 @@ export const PostScreen = props => {
         </View>
       </ScrollView>
       <InputComment style={styles.input} />
+      <View style={styles.buttonUp}>
+        <MessengerTouchableIcon onPress={() => Alert.alert('Up')} name="chevron-up" />
+      </View>
     </SafeAreaView>
   );
 };
