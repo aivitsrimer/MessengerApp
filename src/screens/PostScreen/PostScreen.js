@@ -1,6 +1,6 @@
 import React from 'react';
 import {Alert, SafeAreaView, ScrollView, View} from 'react-native';
-import {MessengerStatusBar, MessengerText, MessengerTouchableIcon} from '../../components/ui-kit';
+import {MessengerStatusBar, MessengerTouchableIcon} from '../../components/ui-kit';
 import styles from '../PostScreen/PostScreenStyles';
 import {Post} from '../../components/Post';
 import {InputComment} from '../../components/Post/InputComment';
