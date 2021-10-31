@@ -9,10 +9,15 @@ import {ProfileScreen} from './screens/ProfileScreen';
 import {FriendsScreen} from './screens/FriendsScreen';
 import {SettingsScreen} from './screens/SettingsScreen';
 import {PostScreen} from './screens/PostScreen';
+import {AuthScreen} from './screens/AuthScreen';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  const isLogged = false;
+  if (!isLogged) {
+    return <AuthScreen />;
+  }
   return (
     <Provider store={store}>
       <NavigationContainer>
