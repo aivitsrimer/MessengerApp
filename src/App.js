@@ -3,25 +3,26 @@ import {Provider} from 'react-redux';
 import store from './redux/reduxStore';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen} from './screens/HomeScreen';
-import {Root} from './screens/Root';
-import {ProfileScreen} from './screens/ProfileScreen';
-import {FriendsScreen} from './screens/FriendsScreen';
-import {SettingsScreen} from './screens/SettingsScreen';
-import {PostScreen} from './screens/PostScreen';
-import {AuthScreen} from './screens/AuthScreen';
+import {
+  FriendsScreen,
+  HomeScreen,
+  AuthScreen,
+  PostScreen,
+  ProfileScreen,
+  Root,
+  SettingsScreen,
+  SplashScreen,
+} from './screens';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const isLogged = false;
-  if (!isLogged) {
-    return <AuthScreen />;
-  }
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Root">
+        <Stack.Navigator initialRouteName="Auth">
+          <Stack.Screen name="Auth" component={AuthScreen} options={{headerShown: false}} />
+          <Stack.Screen name="Splash" component={SplashScreen} options={{headerShown: false}} />
           <Stack.Screen name="Root" component={Root} options={{headerShown: false}} />
           <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
           <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
