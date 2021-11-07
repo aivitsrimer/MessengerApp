@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 let mapStateToProps = state => {
   return {
-    friendsList: state.friendsPage.friendsList,
+    itemsList: state.searchPage.itemsList,
   };
 };
 

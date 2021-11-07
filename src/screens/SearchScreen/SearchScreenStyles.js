@@ -5,8 +5,6 @@ const styles = StyleSheet.create({
   default: {
     flex: 1,
     backgroundColor: colors.ULTRAMARINE_BLUE,
-  },
-  defaultStyle: {
     paddingHorizontal: 16,
   },
   container: {

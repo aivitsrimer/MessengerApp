@@ -4,6 +4,7 @@ import profileReducer from './profileReducer';
 import postReducer from './postReducer';
 import friendsReducer from './friendsReducer';
 import authReducer from './authReducer';
+import searchReducer from './searchReducer';
 
 let reducers = combineReducers({
   authPage: authReducer,
@@ -11,6 +12,7 @@ let reducers = combineReducers({
   profilePage: profileReducer,
   postPage: postReducer,
   friendsPage: friendsReducer,
+  searchPage: searchReducer,
 });
 
 let store = createStore(reducers);

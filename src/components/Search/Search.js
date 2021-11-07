@@ -1,15 +1,16 @@
 import React from 'react';
-import {View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {MessengerTouchableIcon} from '../ui-kit';
 import styles from './SearchStyles';
 import {useNavigation} from '@react-navigation/native';
 import {InputSearch} from './InputSearch';
+import {SearchItem} from './SearchItem';
 
 export const Search = props => {
   const navigation = useNavigation();
-  // const FriendElements = props.friendsList.map(item => (
-  //   <Friend path={item.photo} name={item.name} location={item.location} key={item.id} />
-  // ));
+  const flatRenderItem = data => {
+    return <SearchItem path={data.item.photo} name={data.item.name} location={data.item.location} />;
+  };
 
   return (
     <View style={styles.container}>
@@ -24,7 +25,9 @@ export const Search = props => {
         </View>
         <InputSearch />
       </View>
-      {/*{FriendElements}*/}
+      <View style={styles.container}>
+        <FlatList data={props.itemsList} renderItem={flatRenderItem} keyExtractor={item => item.id} />
+      </View>
     </View>
   );
 };
