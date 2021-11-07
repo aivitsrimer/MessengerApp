@@ -106,10 +106,20 @@ let initialState = {
       type: 'friend',
     },
   ],
+  filter: 'all',
 };
 
-const searchReducer = (state = initialState) => {
-  return state;
+const SET_FILTER = 'SET_FILTER';
+
+const searchReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_FILTER:
+      return {...state, filter: action.filter};
+    default:
+      return state;
+  }
 };
+
+export const setFilterActionCreator = filter => ({type: SET_FILTER, filter});
 
 export default searchReducer;

@@ -5,6 +5,7 @@ import styles from './SearchStyles';
 import {useNavigation} from '@react-navigation/native';
 import {InputSearch} from './InputSearch';
 import {SearchItem} from './SearchItem';
+import {SearchFilter} from './SearchFilter';
 
 export const Search = props => {
   const navigation = useNavigation();
@@ -25,6 +26,7 @@ export const Search = props => {
         </View>
         <InputSearch />
       </View>
+      <SearchFilter filter={props.filter} setFilter={props.setFilter} />
       <View style={styles.container}>
         <FlatList data={props.itemsList} renderItem={flatRenderItem} keyExtractor={item => item.id} />
       </View>

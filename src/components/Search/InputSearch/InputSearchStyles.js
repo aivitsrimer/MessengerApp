@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     paddingLeft: 39,
     backgroundColor: colors.SAPPHIRE_BLUE,
     borderColor: colors.SAPPHIRE_BLUE,
-    color: colors.PERL_PURPLE,
+    color: colors.WHITE,
   },
   placeholder: {
     color: colors.PERL_PURPLE,
