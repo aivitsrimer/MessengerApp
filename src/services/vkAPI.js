@@ -1,7 +1,9 @@
 import {vkGetPhotos} from './vkClient';
 
 export const photosGet = () => {
-  return vkGetPhotos({count: 18});
+  let res = vkGetPhotos({count: 18});
+  console.log(res);
+  return res;
 };
 
 async function getUser() {

@@ -1,6 +1,6 @@
 import {LoginWebView} from './LoginWebView';
 import {connect} from 'react-redux';
-import {restoreTokenActionCreator} from '../../redux/authReducer';
+import {restoreTokenActionCreator} from '../../redux/reducers/authReducer';
 
 let mapStateToProps = state => {
   return {

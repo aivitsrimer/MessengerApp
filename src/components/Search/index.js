@@ -1,6 +1,6 @@
 import {Search} from './Search';
 import {connect} from 'react-redux';
-import {setFilterActionCreator} from '../../redux/searchReducer';
+import {setFilterActionCreator} from '../../redux/reducers/searchReducer';
 
 let mapStateToProps = state => {
   return {

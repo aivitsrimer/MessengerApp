@@ -12,8 +12,10 @@ const authReducer = (state = initialState, action) => {
     case RESTORE_TOKEN:
       return {
         ...state,
-        accessToken: action.accessToken,
-        isLoading: false,
+        auth: {
+          accessToken: action.accessToken,
+          isLoading: false,
+        },
       };
     default:
       return state;
