@@ -1,4 +1,4 @@
-import {FETCH_PHOTOS, FETCH_PHOTOS_ERROR, FETCH_PHOTOS_SUCCESS, SET_PHOTOS} from '../actionTypes/profile';
+import {FETCH_PHOTOS, FETCH_PHOTOS_ERROR, FETCH_PHOTOS_SUCCESS} from '../actionTypes/profile';
 
 let initialState = {
   moreDetails: {
@@ -61,6 +61,7 @@ let initialState = {
     isLoaded: false,
     loading: false,
     error: '',
+    count: 18,
     photos: [
       {id: 1, path: require('../../assets/images/photo1.jpg')},
       {id: 2, path: require('../../assets/images/photo2.jpg')},
@@ -101,7 +102,8 @@ const profileReducer = (state = initialState, action) => {
         photoGrid: {
           isLoaded: true,
           loading: false,
-          photos: [...action.items],
+          count: action.response.count,
+          photos: action.response.items,
         },
       };
     case FETCH_PHOTOS_ERROR:
@@ -112,15 +114,6 @@ const profileReducer = (state = initialState, action) => {
           isLoaded: true,
           loading: false,
           error: action.error,
-        },
-      };
-    case SET_PHOTOS:
-      console.log(action);
-      return {
-        ...state,
-        photoGrid: {
-          isLoaded: true,
-          photos: [...action.items],
         },
       };
     default:

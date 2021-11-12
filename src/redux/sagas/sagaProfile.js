@@ -1,13 +1,12 @@
 import {call, put, takeEvery} from 'redux-saga/effects';
 import * as actionTypes from '../actionTypes/profile';
 import * as actionCreators from '../actionCreators/profile';
-import {photosGet} from '../../services/vkAPI';
+import * as profile from '../services/profile';
 
 function* getPhotos() {
   try {
-    let items = yield call(() => photosGet());
-    console.log(items);
-    yield put(actionCreators.fetchPhotosSuccessActionCreator(items));
+    let response = yield call(() => profile.getPhotos());
+    yield put(actionCreators.fetchPhotosSuccessActionCreator(response));
   } catch (error) {
     yield put(actionCreators.fetchPhotosErrorActionCreator(error));
   }
