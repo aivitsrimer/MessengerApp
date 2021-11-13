@@ -1,11 +1,15 @@
 import React, {useCallback} from 'react';
-import {Linking, TouchableOpacity} from 'react-native';
+import {Alert, Linking, TouchableOpacity} from 'react-native';
 import {Icon} from '../../../assets/icons';
 import {MessengerText} from '../../ui-kit';
 import styles from './LinkElementStyles';
 
 export const LinkElement = props => {
   const handlePress = useCallback(async () => {
+    if (!props.link || !(props.link.startsWith('http://') || props.link.startsWith('https://'))) {
+      Alert.alert('Ссылка не указана');
+      return;
+    }
     await Linking.openURL(props.link);
   }, [props.link]);
 

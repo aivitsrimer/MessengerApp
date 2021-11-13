@@ -8,11 +8,11 @@ import {LinkElement} from '../LinkElement';
 import styles from './MoreDetailsStyles';
 
 export const MoreDetails = props => {
-  const linkElements = props.moreDetails.links.map(item => (
-    <LinkElement icon={item.icon} text={item.text} link={item.link} key={item.id} />
+  const linkElements = props.moreDetails.links.map((item, index) => (
+    <LinkElement icon={item.icon} text={item.text} link={item.link} key={index} />
   ));
-  const detailsElements = props.moreDetails.details.map(item => (
-    <DetailsElement icon={item.icon} text={item.text} key={item.id} />
+  const detailsElements = props.moreDetails.details.map((item, index) => (
+    <DetailsElement icon={item.icon} text={item.textPrefix ? item.textPrefix + item.text : item.text} key={index} />
   ));
 
   return (

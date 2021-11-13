@@ -25,53 +25,55 @@ let initialState = {
   moreDetails: {
     details: [
       {
-        id: 1,
+        key: 'status',
         icon: 'chat',
         text: 'They never ask people to do things they wouldn’t do themselves.',
       },
       {
-        id: 2,
+        key: 'bdate',
         icon: 'cake',
-        text: 'День рождения: 08 октября 1992',
+        textPrefix: 'День рождения: ',
+        text: '08 октября 1992',
       },
       {
-        id: 3,
+        key: 'city',
         icon: 'location-marker',
-        text: 'Город: Санкт-Петербург',
+        textPrefix: 'Город: ',
+        text: 'Санкт-Петербург',
       },
       {
-        id: 4,
+        key: 'university',
         icon: 'briefcase',
         text: 'ВГУЮ в г. Санкт-Петербург',
       },
     ],
     links: [
       {
-        id: 1,
+        key: 'site',
         icon: 'arrow-up',
         text: 'https://t.me/durov',
         link: 'https://t.me/durov',
       },
       {
-        id: 2,
+        key: 'twitter',
         icon: 'twitter',
         text: 'Durov',
         link: 'https://twitter.com',
       },
       {
-        id: 3,
+        key: 'instagram',
         icon: 'instagram',
         text: 'Pavel Durov',
         link: 'https://instgram.com',
       },
       {
-        id: 4,
+        key: 'facebook',
         icon: 'facebook',
         text: 'durov',
         link: 'https://fb.com',
       },
       {
-        id: 5,
+        key: 'telegram',
         icon: 'telegram',
         text: 'durov',
         link: 'https://telegram.com',
@@ -152,7 +154,15 @@ const profileReducer = (state = initialState, action) => {
         userInfo: {
           isLoaded: true,
           loading: false,
-          info: action.response,
+          info: action.response.info,
+        },
+        moreDetails: {
+          details: state.moreDetails.details.map(item => {
+            return {...item, text: action.response.details[item.key]};
+          }),
+          links: state.moreDetails.links.map(item => {
+            return {...item, text: action.response.links[item.key], link: action.response.links[item.key]};
+          }),
         },
       };
     case GET_INFO_ERROR:
