@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {SafeAreaView, ScrollView, View} from 'react-native';
 import {MessengerStatusBar} from '../../components/ui-kit';
 import {NavIcons} from '../../components/NavIcons';
-import {ProfileInfo} from '../../components/ProfileInfo';
+import {MyProfileInfo} from '../../components/ProfileInfo';
 import {Divider} from '../../components/Divider';
 import {MyPhotosGrid} from '../../components/PhotosGrid';
 import {MoreDetailsModal} from '../../components/MoreDetailsModal';
@@ -19,7 +19,7 @@ export const ProfileScreen = props => {
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>
           <NavIcons setModalVisible={setModalMenuVisible} navigation={props.navigation} />
-          <ProfileInfo setModalVisible={setModalDetailsVisible} />
+          <MyProfileInfo setModalVisible={setModalDetailsVisible} />
           <Divider style={styles.divider} />
           <MyPhotosGrid />
         </View>

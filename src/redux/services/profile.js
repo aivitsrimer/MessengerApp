@@ -7,3 +7,7 @@ export const getPhotos = () => {
 export const getMorePhotos = offset => {
   return vk.photos.getAll({count: 18, offset: offset});
 };
+
+export const getUserInfo = () => {
+  return vk.users.get();
+};

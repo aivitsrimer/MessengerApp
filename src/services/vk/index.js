@@ -1,2 +1,4 @@
 import * as photos from './photos';
-export {photos};
+import * as users from './users';
+
+export {photos, users};

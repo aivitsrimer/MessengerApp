@@ -15,3 +15,16 @@ function* getPhotos() {
 export function* getPhotosTakeEvery() {
   yield takeEvery(actionTypes.FETCH_PHOTOS, getPhotos);
 }
+
+function* getInfo() {
+  try {
+    let response = yield call(() => profile.getUserInfo());
+    yield put(actionCreators.getInfoSuccessSuccessActionCreator(response));
+  } catch (error) {
+    yield put(actionCreators.getInfoErrorActionCreator(error));
+  }
+}
+
+export function* getInfoTakeEvery() {
+  yield takeEvery(actionTypes.GET_INFO, getInfo);
+}

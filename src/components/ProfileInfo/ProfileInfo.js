@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View} from 'react-native';
 import {MessengerButton, MessengerImage, MessengerText} from '../ui-kit';
 import {FollowingInfo} from './FollowingInfo';
 import styles from './ProfileInfoStyles';
 
 export const ProfileInfo = props => {
+  useEffect(() => {
+    props.getInfo();
+  }, []);
+
+  const imageProp = props.userInfo.info.photo ? {path: props.userInfo.info.photo} : {uri: props.userInfo.info.uri};
+
   return (
     <>
       <View style={styles.container}>
-        <MessengerImage style={styles.profilePhoto} path={require('../../assets/images/profilePhoto.jpg')} />
-        <MessengerText text="Kat Williams" style={styles.textName} />
-        <MessengerText text="@Williams" style={styles.textAccount} />
-        <MessengerText text="Россия, Санкт-Петербург" style={styles.textLocation} />
-        <MessengerText text="Место работы: Artist by Passion!" style={styles.textWork} />
+        <MessengerImage style={styles.profilePhoto} {...imageProp} />
+        <MessengerText text={props.userInfo.info.name} style={styles.textName} />
+        <MessengerText text={`@${props.userInfo.info.account}`} style={styles.textAccount} />
+        <MessengerText text={props.userInfo.info.location} style={styles.textLocation} />
+        <MessengerText text={props.userInfo.info.work} style={styles.textWork} />
       </View>
       <View style={styles.containerInfo}>
-        <FollowingInfo />
+        <FollowingInfo followers={props.userInfo.info.followers} following={props.userInfo.info.following} />
         <MessengerButton text="Подробнее" onPress={() => props.setModalVisible(true)} />
       </View>
     </>

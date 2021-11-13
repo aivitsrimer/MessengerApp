@@ -1,6 +1,27 @@
-import {FETCH_PHOTOS, FETCH_PHOTOS_ERROR, FETCH_PHOTOS_SUCCESS} from '../actionTypes/profile';
+import {
+  FETCH_PHOTOS,
+  FETCH_PHOTOS_ERROR,
+  FETCH_PHOTOS_SUCCESS,
+  GET_INFO,
+  GET_INFO_ERROR,
+  GET_INFO_SUCCESS,
+} from '../actionTypes/profile';
 
 let initialState = {
+  userInfo: {
+    isLoaded: false,
+    loading: false,
+    error: '',
+    info: {
+      photo: require('../../assets/images/profilePhoto.jpg'),
+      name: 'Kat Williams',
+      account: 'Williams',
+      location: 'Россия, Санкт-Петербург',
+      work: 'Место работы: Artist by Passion!',
+      followers: '2,467',
+      following: '1,589',
+    },
+  },
   moreDetails: {
     details: [
       {
@@ -114,6 +135,34 @@ const profileReducer = (state = initialState, action) => {
           isLoaded: true,
           loading: false,
           error: action.error,
+        },
+      };
+    case GET_INFO:
+      return {
+        ...state,
+        userInfo: {
+          loading: true,
+          info: state.userInfo.info,
+        },
+      };
+    case GET_INFO_SUCCESS:
+      console.log(action);
+      return {
+        ...state,
+        userInfo: {
+          isLoaded: true,
+          loading: false,
+          info: action.response,
+        },
+      };
+    case GET_INFO_ERROR:
+      console.log(action);
+      return {
+        ...state,
+        userInfo: {
+          isLoaded: true,
+          loading: false,
+          error: action.error.msg,
         },
       };
     default:

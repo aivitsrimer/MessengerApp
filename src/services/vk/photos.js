@@ -1,11 +1,11 @@
 import * as http from '../http';
 import {API_VERSION, ACCESS_TOKEN} from './const';
 
-const prefix = 'https://api.vk.com/method/photos';
+const PREFIX = 'https://api.vk.com/method/photos';
 
 export const getAll = ({count = 18, offset = 0}) => {
   console.log(ACCESS_TOKEN);
-  const url = `${prefix}.getAll?v=${API_VERSION}&access_token=${ACCESS_TOKEN}&count=${count}&offset=${offset}`;
+  const url = `${PREFIX}.getAll?v=${API_VERSION}&access_token=${ACCESS_TOKEN}&count=${count}&offset=${offset}`;
   return http.get(url).then(json => {
     if (json.response === undefined) {
       throw new Error('response is empty');
