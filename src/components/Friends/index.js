@@ -1,12 +1,19 @@
 import {Friends} from './Friends';
 import {connect} from 'react-redux';
+import {getFriendsActionCreator} from '../../redux/actionCreators/friends';
 
 let mapStateToProps = state => {
   return {
-    friendsList: state.friendsPage.friendsList,
+    friends: state.friendsPage.friends,
   };
 };
 
-let MyFriends = connect(mapStateToProps)(Friends);
+let mapDispatchToProps = dispatch => {
+  return {
+    getFriends: () => dispatch(getFriendsActionCreator()),
+  };
+};
+
+let MyFriends = connect(mapStateToProps, mapDispatchToProps)(Friends);
 
 export {MyFriends};

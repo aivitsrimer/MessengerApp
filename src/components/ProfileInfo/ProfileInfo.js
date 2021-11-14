@@ -6,7 +6,9 @@ import styles from './ProfileInfoStyles';
 
 export const ProfileInfo = props => {
   useEffect(() => {
-    props.getInfo();
+    if (!props.isLoaded) {
+      props.getInfo();
+    }
   }, []);
 
   const imageProp = props.userInfo.info.photo ? {path: props.userInfo.info.photo} : {uri: props.userInfo.info.uri};

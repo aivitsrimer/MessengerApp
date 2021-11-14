@@ -114,12 +114,11 @@ const profileReducer = (state = initialState, action) => {
       return {
         ...state,
         photoGrid: {
+          ...state.photoGrid,
           loading: true,
-          photos: state.photoGrid.photos,
         },
       };
     case FETCH_PHOTOS_SUCCESS:
-      console.log(action);
       return {
         ...state,
         photoGrid: {
@@ -130,7 +129,6 @@ const profileReducer = (state = initialState, action) => {
         },
       };
     case FETCH_PHOTOS_ERROR:
-      console.log(action);
       return {
         ...state,
         photoGrid: {
@@ -143,12 +141,11 @@ const profileReducer = (state = initialState, action) => {
       return {
         ...state,
         userInfo: {
+          ...state.userInfo,
           loading: true,
-          info: state.userInfo.info,
         },
       };
     case GET_INFO_SUCCESS:
-      console.log(action);
       return {
         ...state,
         userInfo: {
@@ -166,7 +163,6 @@ const profileReducer = (state = initialState, action) => {
         },
       };
     case GET_INFO_ERROR:
-      console.log(action);
       return {
         ...state,
         userInfo: {

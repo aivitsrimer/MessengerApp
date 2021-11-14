@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View} from 'react-native';
 import {MessengerText, MessengerTouchableIcon} from '../ui-kit';
 import styles from './FriendsStyles';
 import {Friend} from './Friend';
 
 export const Friends = props => {
-  const FriendElements = props.friendsList.map(item => (
-    <Friend path={item.photo} name={item.name} location={item.location} key={item.id} />
-  ));
+  useEffect(() => {
+    if (!props.isLoaded) {
+      props.getFriends();
+    }
+  }, []);
+
+  const FriendElements = props.friends.list.map((item, index) => <Friend {...item} key={index} />);
 
   return (
     <View style={styles.container}>

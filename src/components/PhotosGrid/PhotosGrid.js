@@ -5,7 +5,9 @@ import styles from './PhotosGridStyles';
 
 export const PhotosGrid = props => {
   useEffect(() => {
-    props.fetchPhotos();
+    if (!props.isLoaded) {
+      props.fetchPhotos();
+    }
   }, []);
 
   const photoElements = props.photoGrid.photos.map(item => {
