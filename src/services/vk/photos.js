@@ -3,8 +3,7 @@ import {API_VERSION, ACCESS_TOKEN} from './const';
 
 const PREFIX = 'https://api.vk.com/method/photos';
 
-export const getAll = ({count = 18, offset = 0}) => {
-  console.log(ACCESS_TOKEN);
+export const getAll = (count = 18, offset = 0) => {
   const url = `${PREFIX}.getAll?v=${API_VERSION}&access_token=${ACCESS_TOKEN}&count=${count}&offset=${offset}`;
   return http.get(url).then(json => {
     if (json.response === undefined) {

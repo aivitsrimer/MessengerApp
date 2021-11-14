@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FlatList, View} from 'react-native';
 import {MessengerTouchableIcon} from '../ui-kit';
 import styles from './SearchStyles';
@@ -8,9 +8,15 @@ import {SearchItem} from './SearchItem';
 import {SearchFilter} from './SearchFilter';
 
 export const Search = props => {
+  useEffect(() => {
+    if (!props.isLoaded) {
+      props.search(props.query, props.filter);
+    }
+  }, []);
+
   const navigation = useNavigation();
   const flatRenderItem = data => {
-    return <SearchItem path={data.item.photo} name={data.item.name} location={data.item.location} />;
+    return <SearchItem {...data.item} />;
   };
 
   return (
@@ -24,9 +30,9 @@ export const Search = props => {
             onPress={() => navigation.goBack()}
           />
         </View>
-        <InputSearch />
+        <InputSearch filter={props.filter} query={props.query} search={props.search} />
       </View>
-      <SearchFilter filter={props.filter} setFilter={props.setFilter} />
+      <SearchFilter filter={props.filter} query={props.query} search={props.search} setFilter={props.setFilter} />
       <View style={styles.container}>
         <FlatList data={props.itemsList} renderItem={flatRenderItem} keyExtractor={item => item.id} />
       </View>

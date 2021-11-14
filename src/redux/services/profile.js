@@ -1,11 +1,11 @@
 import * as vk from '../../services/vk';
 
 export const getPhotos = () => {
-  return vk.photos.getAll({count: 18});
+  return vk.photos.getAll(18);
 };
 
 export const getMorePhotos = offset => {
-  return vk.photos.getAll({count: 18, offset: offset});
+  return vk.photos.getAll(18, offset);
 };
 
 export const getUserInfo = () => {

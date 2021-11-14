@@ -7,7 +7,7 @@ export const SearchItem = props => {
   return (
     <View style={styles.container}>
       <View style={styles.containerImage}>
-        <MessengerImage path={props.path} style={styles.photo} />
+        <MessengerImage {...props} style={styles.photo} />
       </View>
       <View style={styles.containerText}>
         <MessengerText text={props.name} style={styles.textName} />
