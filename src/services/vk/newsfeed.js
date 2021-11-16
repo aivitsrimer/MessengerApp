@@ -12,9 +12,10 @@ const parseData = data => {
         date: item.date,
         content: {
           text: item.text,
-          images: item.attachments
-            .filter(attachment => attachment.type === 'photo')
-            .map(image => image.photo.sizes[image.photo.sizes.length - 1]?.url),
+          images:
+            item.attachments
+              ?.filter(attachment => attachment.type === 'photo')
+              .map(image => image.photo.sizes[image.photo.sizes.length - 1]?.url) || [],
         },
         commentsCount: item.comments.count,
         likesCount: item.likes.count,
