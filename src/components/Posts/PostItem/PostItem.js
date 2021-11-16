@@ -5,15 +5,12 @@ import {PostFooter} from './PostFooter';
 import {PostBody} from './PostBody';
 
 export const PostItem = props => {
+  const item = props.data.item;
   return (
     <View>
-      <PostHeader photo={props.data.photo} name={props.data.name} date={props.data.date} />
-      <PostBody content={props.data.content} />
-      <PostFooter
-        likesCount={props.data.likesCount}
-        commentsCount={props.data.commentsCount}
-        navigation={props.navigation}
-      />
+      <PostHeader {...(item.photo ? {path: item.photo} : {uri: item.uri})} name={item.name} date={item.date} />
+      <PostBody content={item.content} text={item.text} />
+      <PostFooter likesCount={item.likesCount} commentsCount={item.commentsCount} />
     </View>
   );
 };

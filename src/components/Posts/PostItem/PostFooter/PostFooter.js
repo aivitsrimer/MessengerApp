@@ -3,8 +3,10 @@ import {Alert, View} from 'react-native';
 import {MessengerText, MessengerTouchableIcon} from '../../../ui-kit';
 import styles from './PostFooterStyles';
 import {Divider} from '../../../Divider';
+import {useNavigation} from '@react-navigation/native';
 
 export const PostFooter = props => {
+  const navigation = useNavigation();
   const showComments = parseInt(props.commentsCount) > 0;
 
   return (
@@ -18,9 +20,7 @@ export const PostFooter = props => {
           {showComments && (
             <View style={styles.containerComments}>
               <MessengerTouchableIcon
-                onPress={
-                  props.navigation ? () => props.navigation.navigate('Post') : () => Alert.alert('Open Comments')
-                }
+                onPress={() => navigation.navigate('Post')}
                 name="chat"
                 style={styles.iconComments}
               />

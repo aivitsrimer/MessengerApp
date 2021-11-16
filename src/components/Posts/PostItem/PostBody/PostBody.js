@@ -6,22 +6,27 @@ import {Slider} from '../../Slider';
 
 export const PostBody = props => {
   function getContent() {
-    if (props.content?.images) {
+    if (props.content?.images.length > 1) {
       return (
         <View style={styles.containerSlider}>
           <Slider images={props.content.images} />
         </View>
       );
     }
-    if (props.content?.image) {
+    if (props.content?.images.length === 1) {
       return (
         <View style={styles.containerImage}>
-          <MessengerImage path={props.content.image} style={styles.image} />
+          <MessengerImage
+            {...(typeof props.content.images[0] === 'string'
+              ? {uri: props.content.images[0]}
+              : {path: props.content.images[0]})}
+            style={styles.image}
+          />
         </View>
       );
     }
-    if (props.content?.text) {
-      return <MessengerText style={styles.text}>{props.content.text}</MessengerText>;
+    if (props.content?.images.length === 0) {
+      return <MessengerText style={styles.text}>{props.content?.text}</MessengerText>;
     }
   }
 

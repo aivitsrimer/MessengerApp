@@ -1,15 +1,21 @@
-import React from 'react';
-import {View} from 'react-native';
+import React, {useEffect} from 'react';
+import {FlatList} from 'react-native';
 import {PostItem} from './PostItem';
 import styles from './PostsStyles';
 
 export const Posts = props => {
+  useEffect(() => {
+    if (!props.isLoaded) {
+      props.getPosts();
+    }
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <PostItem data={props.postsData.post1} navigation={props.navigation} />
-      <PostItem data={props.postsData.post2} />
-      <PostItem data={props.postsData.post3} />
-      <PostItem data={props.postsData.post4} />
-    </View>
+    <FlatList
+      style={styles.container}
+      data={props.posts.list}
+      renderItem={data => <PostItem data={data} />}
+      keyExtractor={data => data.id}
+    />
   );
 };

@@ -9,7 +9,7 @@ export const PostHeader = props => {
     <View style={styles.container}>
       <View style={styles.containerData}>
         <View style={styles.containerImage}>
-          <MessengerImage path={props.photo} style={styles.photo} />
+          <MessengerImage {...props} style={styles.photo} />
         </View>
         <View style={styles.containerText}>
           <MessengerText text={props.name} style={styles.textName} />

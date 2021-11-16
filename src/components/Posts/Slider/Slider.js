@@ -12,7 +12,9 @@ export const Slider = props => {
     }
   };
 
-  let SliderItem = props.images.map((image, index) => <MessengerImage key={index} path={image} style={styles.image} />);
+  let SliderItem = props.images.map((image, index) => (
+    <MessengerImage key={index} {...(typeof image === 'string' ? {uri: image} : {path: image})} style={styles.image} />
+  ));
   let IndicatorItem = props.images.map((image, index) => (
     <View key={index} style={index === activeIndicator ? styles.indicatorActive : styles.indicator} />
   ));

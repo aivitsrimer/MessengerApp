@@ -1,12 +1,19 @@
 import {Posts} from './Posts';
 import {connect} from 'react-redux';
+import {getPostsActionCreator} from '../../redux/actionCreators/home';
 
 let mapStateToProps = state => {
   return {
-    postsData: state.homePage.posts.postData,
+    posts: state.homePage.posts,
   };
 };
 
-let MyPosts = connect(mapStateToProps)(Posts);
+let mapDispatchToProps = dispatch => {
+  return {
+    getPosts: () => dispatch(getPostsActionCreator()),
+  };
+};
+
+let MyPosts = connect(mapStateToProps, mapDispatchToProps)(Posts);
 
 export {MyPosts};

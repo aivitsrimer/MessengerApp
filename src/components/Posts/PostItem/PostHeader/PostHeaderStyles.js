@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   },
   textName: {
     textAlign: 'left',
+    maxWidth: 280,
     color: color.LAVENDER,
     ...fonts.GroteskBold14,
   },
