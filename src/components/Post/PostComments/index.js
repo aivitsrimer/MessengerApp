@@ -1,12 +1,19 @@
 import {PostComments} from './PostComments';
 import {connect} from 'react-redux';
+import {getCommentsActionCreator} from '../../../redux/actionCreators/post';
 
 let mapStateToProps = state => {
   return {
-    comments: state.postPage.comments,
+    post: state.postPage.post,
   };
 };
 
-let MyPostComments = connect(mapStateToProps)(PostComments);
+let mapDispatchToProps = dispatch => {
+  return {
+    getComments: (post_id, owner_id) => dispatch(getCommentsActionCreator(post_id, owner_id)),
+  };
+};
+
+let MyPostComments = connect(mapStateToProps, mapDispatchToProps)(PostComments);
 
 export {MyPostComments};

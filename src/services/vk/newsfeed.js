@@ -37,9 +37,6 @@ const parseData = data => {
           }
           return result;
         }, undefined);
-        if (group === undefined) {
-          console.log(post);
-        }
         post.name = group.name;
         post.uri = group.photo_50;
       }
@@ -47,7 +44,6 @@ const parseData = data => {
       return post;
     })
     .filter(item => {
-      console.log(item.name, item.content);
       return item.content.text || item.content.images.length > 0;
     });
 };
@@ -58,7 +54,7 @@ export const get = (count = 20) => {
     if (json.response === undefined) {
       throw new Error('response is empty');
     }
-    console.log(json.response);
+
     return {
       posts: parseData(json.response),
       next_from: json.response.next_from,

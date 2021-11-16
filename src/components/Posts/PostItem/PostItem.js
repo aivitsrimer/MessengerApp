@@ -10,7 +10,7 @@ export const PostItem = props => {
     <View>
       <PostHeader {...(item.photo ? {path: item.photo} : {uri: item.uri})} name={item.name} date={item.date} />
       <PostBody content={item.content} text={item.text} />
-      <PostFooter likesCount={item.likesCount} commentsCount={item.commentsCount} />
+      <PostFooter likesCount={item.likesCount} commentsCount={item.commentsCount} setPost={props.setPost} post={item} />
     </View>
   );
 };

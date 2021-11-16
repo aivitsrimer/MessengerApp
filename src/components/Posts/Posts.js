@@ -14,7 +14,7 @@ export const Posts = props => {
     <FlatList
       style={styles.container}
       data={props.posts.list}
-      renderItem={data => <PostItem data={data} />}
+      renderItem={data => <PostItem data={data} setPost={props.setPost} />}
       keyExtractor={data => data.id}
     />
   );

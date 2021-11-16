@@ -6,7 +6,7 @@ import {MyFriends} from '../../components/Friends';
 
 export const FriendsScreen = props => {
   return (
-    <SafeAreaView style={styles.defaultBackground}>
+    <SafeAreaView style={styles.default}>
       <MessengerStatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.defaultStyle}>
         <View style={styles.container}>

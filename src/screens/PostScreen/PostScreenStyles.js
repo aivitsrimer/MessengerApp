@@ -3,6 +3,7 @@ import colors from '../../assets/colors';
 
 const styles = StyleSheet.create({
   defaultBackground: {
+    flex: 1,
     backgroundColor: colors.ULTRAMARINE_BLUE,
   },
   defaultStyle: {
