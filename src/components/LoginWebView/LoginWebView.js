@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react';
+import React, {FunctionComponent, useCallback} from 'react';
 import styles from './LoginWebViewStyles';
 import {WebView} from 'react-native-webview';
 import {API_ID} from '@env';
@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 export const LoginWebView = props => {
   const navigation = useNavigation();
 
-  const onLoadEndHandle = input => {
+  const onLoadEndHandle = useCallback(input => {
     const getAccessToken = url => {
       const [, hashQuery] = url.split('#');
       const params = hashQuery?.split('&').reduce((result, paramString) => {
@@ -27,7 +27,7 @@ export const LoginWebView = props => {
       props.restoreToken(accessToken);
       navigation.navigate('Root');
     }
-  };
+  }, []);
 
   const scope = 2 + 4 + 8192 + 262144;
 
@@ -35,14 +35,9 @@ export const LoginWebView = props => {
     <WebView
       style={styles.default}
       source={{
-        uri:
-          'https://oauth.vk.com/authorize?client_id=' +
-          API_ID +
-          '&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=' +
-          scope +
-          '&response_type=token&v=5.81',
+        uri: `https://oauth.vk.com/authorize?client_id=${API_ID}&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=${scope}&response_type=token&v=5.81`,
       }}
-      onLoadEnd={onLoadEndHandle}
+      onLoadEnd={() => onLoadEndHandle()}
     />
   );
 

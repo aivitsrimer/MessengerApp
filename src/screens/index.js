@@ -5,6 +5,6 @@ import {FriendsScreen} from './FriendsScreen';
 import {SettingsScreen} from './SettingsScreen';
 import {PostScreen} from './PostScreen';
 import {AuthScreen} from './AuthScreen';
-import {SplashScreen} from './SplashScreen';
+import {MySplashScreen} from './SplashScreen';
 
-export {Root, HomeScreen, ProfileScreen, FriendsScreen, SettingsScreen, PostScreen, AuthScreen, SplashScreen};
+export {Root, HomeScreen, ProfileScreen, FriendsScreen, SettingsScreen, PostScreen, AuthScreen, MySplashScreen};

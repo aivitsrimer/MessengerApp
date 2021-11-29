@@ -1,3 +1,3 @@
-import {SplashScreen} from './SplashScreen';
+import {MySplashScreen} from './MySplashScreen';
 
-export {SplashScreen};
+export {MySplashScreen};

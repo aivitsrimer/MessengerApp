@@ -1,9 +1,9 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, View} from 'react-native';
 import {MessengerStatusBar, MessengerText} from '../../components/ui-kit';
-import styles from './SplashScreenStyles';
+import styles from './MySplashScreenStyles';
 
-export const SplashScreen = () => {
+export const MySplashScreen = () => {
   return (
     <SafeAreaView style={styles.default}>
       <MessengerStatusBar />
