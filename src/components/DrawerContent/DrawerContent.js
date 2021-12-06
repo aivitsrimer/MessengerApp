@@ -1,12 +1,12 @@
 import React from 'react';
 import {DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer';
-import {DrawerHeader} from './DrawerHeader';
+import {MyDrawerHeader} from './DrawerHeader';
 import styles from './DrawerContentStyles';
 
 export const DrawerContent = props => {
   return (
     <DrawerContentScrollView {...props} style={styles.defaultBackground} labelStyle={styles.title}>
-      <DrawerHeader />
+      <MyDrawerHeader />
       <DrawerItemList
         {...props}
         // activeTintColor="#ff0000"
